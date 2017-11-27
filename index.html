@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel='stylesheet' id='fontawesome-css' href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css?ver=4.3.0'
+    type='text/css' media='all' />
   <link href="dist/build.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Hind:400,500" rel="stylesheet">
   <title>Document</title>
@@ -13,302 +15,465 @@
 
 <body>
 
-  <div class="gaqf">
+  <div class="sm-quote">
 
-    <div id="form-steps" class="gaqf-steps">
-      <div class="gaqf-steps-bar">
-        <div class="gaqf-steps-points">
-          <div class="gaqf-steps-point is-active"></div>
-          <div class="gaqf-steps-point"></div>
-          <div class="gaqf-steps-point"></div>
-          <div class="gaqf-steps-point"></div>
+    <div class="sm-slider" id="slider-1">
+
+      <div class="sm-slider__container">
+
+        <div class="sm-slider__item">
+
+          <div class="sm-slider" id="slider-2">
+
+            <div id="form-steps" class="sm-steps">
+              <div class="sm-steps__bar">
+                <div class="sm-steps__points">
+                  <div class="sm-steps__point is-active"></div>
+                  <div class="sm-steps__point"></div>
+                  <div class="sm-steps__point"></div>
+                  <div class="sm-steps__point"></div>
+                </div>
+                <div class="sm-steps__bar__fill"></div>
+              </div>
+            </div>
+
+            <div class="sm-slider__container">
+
+              <div class="sm-slider__item">
+
+                <div class="sm-quote__page sm-quote__page--interested">
+                  <h3 class="sm-quote__title">I'm interested in...</h3>
+                  <h4 class="sm-quote__subtitle">Select one or more options below to get started</h4>
+                  <div class="sm-quote__content">
+
+                    <div class="sm-quote__options">
+
+                      <label class="sm-quote__options__item" data-help="Data Select from over 30,000 Schools, 105 Job titles and 417,000 Named Teachers and Decision Makers">
+                        <input type="checkbox">
+                        <div class="sm-quote__options__content">
+                          <img class="icon-selected" src="/dist/svg/icon-selected.svg" width="20" height="20">
+                          <img class="icon-inactive" src="/dist/svg/icon-data.svg" width="100" height="90">
+                          <img class="icon-active" src="/dist/svg/icon-data-active.svg" width="90" height="90">
+                          <span class="sm-quote__options__text">Accessing Schools Data</span>
+                        </div>
+                      </label>
+                      <label class="sm-quote__options__item" data-help="Email Send your email direct to the inbox of Teachers and Decision Makers">
+                        <input type="checkbox">
+                        <div class="sm-quote__options__content">
+                          <img class="icon-selected" src="/dist/svg/icon-selected.svg" width="20" height="20">
+                          <img class="icon-inactive" src="/dist/svg/icon-email.svg" width="90" height="90">
+                          <img class="icon-active" src="/dist/svg/icon-email-active.svg" width="90" height="90">
+                          <span class="sm-quote__options__text">Sending an email campaign</span>
+                        </div>
+                      </label>
+                      <label class="sm-quote__options__item" data-help="Fulfilment Services to deliver your Marketing Campaign Direct to named Teachers and Decision Makers">
+                        <input type="checkbox">
+                        <div class="sm-quote__options__content">
+                          <img class="icon-selected" src="/dist/svg/icon-selected.svg" width="20" height="20">
+                          <img class="icon-inactive" src="/dist/svg/icon-post.svg" width="90" height="90">
+                          <img class="icon-active" src="/dist/svg/icon-post-active.svg" width="90" height="90">
+                          <span class="sm-quote__options__text">Sending a postal email campaign</span>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="sm-quote__help" id="first-help">
+                      <span>Select an option</span>
+                    </div>
+
+                    <div class="sm-quote__page__actions">
+                      <div class="sm-quote__chat-link">I'm not sure yet, can we have a chat?</div>
+                      <button data-slider="next" class="sm-quote__btn sm-quote__btn--next">Let’s Get Started</button>
+                    </div>
+                  </div>
+
+                  <img class="sm-quote__avatar" src="/dist/png/pic-michael.png">
+                  <p class="sm-quote__disclaimer">Since 1997, we have worked with education suppliers, charities and agencies across the world to support
+                    their marketing to schools campaigns. Trusted by BBC Children In Need, Apple, Oxfam and more</p>
+                </div>
+
+              </div>
+
+              <div class="sm-slider__item">
+                <div class="sm-quote__page sm-quote__page--like-to-target">
+
+                  <h3 class="sm-quote__title">I'd like to target</h3>
+                  <h4 class="sm-quote__subtitle">Choose each option all your interest</h4>
+
+                  <div class="sm-quote__content">
+
+                    <div class="sm-quote__options">
+                      <div class="sm-quote__options__item">
+                        <img src="/dist/svg/icon-phase.svg" width="80" height="80">
+                        <span class="sm-quote__options__text">Phase of Education</span>
+
+                        <div class="sm-dropdown">
+                          <div class="sm-dropdown__handler">
+                            Select an option
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                          </div>
+                          <ul class="sm-dropdown__options">
+                            <li>
+                              <label class="sm-dropdown__option">
+                                <input type="checkbox">
+                                <div class="sm-dropdown__option__content">
+                                  <span class="sm-dropdown__option__mark"></span>
+                                  All Phases
+                                </div>
+                              </label>
+                            </li>
+                            <li>
+                              <div class="sm-dropdown__expand">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                              </div>
+                              <label class="sm-dropdown__option">
+                                <input type="checkbox">
+                                <div class="sm-dropdown__option__content">
+                                  <span class="sm-dropdown__option__mark"></span>
+                                  Primary
+                                </div>
+                              </label>
+                              <ul class="sm-dropdown__options is-child">
+                                <li>
+                                  <label class="sm-dropdown__option">
+                                    <input type="checkbox">
+                                    <div class="sm-dropdown__option__content">
+                                      <span class="sm-dropdown__option__mark"></span>
+                                      Option 1
+                                    </div>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="sm-dropdown__option">
+                                    <input type="checkbox">
+                                    <div class="sm-dropdown__option__content">
+                                      <span class="sm-dropdown__option__mark"></span>
+                                      Option 2
+                                    </div>
+                                  </label>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <label class="sm-dropdown__option">
+                                <input type="checkbox">
+                                <div class="sm-dropdown__option__content">
+                                  <span class="sm-dropdown__option__mark"></span>Sixth Forms</div>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="sm-quote__options__item">
+                        <img src="/dist/svg/icon-school.svg" width="80" height="80">
+                        <span class="sm-quote__options__text">Type of School</span>
+                        <div class="sm-dropdown">
+                          <div class="sm-dropdown__handler">
+                            Select an option
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                          </div>
+                          <ul class="sm-dropdown__options">
+                            <li>
+                              <label class="sm-dropdown__option">
+                                <input type="checkbox">
+                                <div class="sm-dropdown__option__content">
+                                  <span class="sm-dropdown__option__mark"></span>
+                                  All Phases
+                                </div>
+                              </label>
+                            </li>
+                            <li>
+                              <div class="sm-dropdown__expand">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                              </div>
+                              <label class="sm-dropdown__option">
+                                <input type="checkbox">
+                                <div class="sm-dropdown__option__content">
+                                  <span class="sm-dropdown__option__mark"></span>
+                                  Primary
+                                </div>
+                              </label>
+                              <ul class="sm-dropdown__options is-child">
+                                <li>
+                                  <label class="sm-dropdown__option">
+                                    <input type="checkbox">
+                                    <div class="sm-dropdown__option__content">
+                                      <span class="sm-dropdown__option__mark"></span>
+                                      Option 1
+                                    </div>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="sm-dropdown__option">
+                                    <input type="checkbox">
+                                    <div class="sm-dropdown__option__content">
+                                      <span class="sm-dropdown__option__mark"></span>
+                                      Option 2
+                                    </div>
+                                  </label>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <label class="sm-dropdown__option">
+                                <input type="checkbox">
+                                <div class="sm-dropdown__option__content">
+                                  <span class="sm-dropdown__option__mark"></span>Sixth Forms</div>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="sm-quote__options__item">
+                        <img src="/dist/svg/icon-area.svg" width="80" height="80">
+                        <span class="sm-quote__options__text">Area of School</span>
+                        <div class="sm-dropdown">
+                          <div class="sm-dropdown__handler">
+                            Select an option
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                          </div>
+                          <ul class="sm-dropdown__options">
+                            <li>
+                              <label class="sm-dropdown__option">
+                                <input type="checkbox">
+                                <div class="sm-dropdown__option__content">
+                                  <span class="sm-dropdown__option__mark"></span>
+                                  All Phases
+                                </div>
+                              </label>
+                            </li>
+                            <li>
+                              <div class="sm-dropdown__expand">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                              </div>
+                              <label class="sm-dropdown__option">
+                                <input type="checkbox">
+                                <div class="sm-dropdown__option__content">
+                                  <span class="sm-dropdown__option__mark"></span>
+                                  Primary
+                                </div>
+                              </label>
+                              <ul class="sm-dropdown__options is-child">
+                                <li>
+                                  <label class="sm-dropdown__option">
+                                    <input type="checkbox">
+                                    <div class="sm-dropdown__option__content">
+                                      <span class="sm-dropdown__option__mark"></span>
+                                      Option 1
+                                    </div>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="sm-dropdown__option">
+                                    <input type="checkbox">
+                                    <div class="sm-dropdown__option__content">
+                                      <span class="sm-dropdown__option__mark"></span>
+                                      Option 2
+                                    </div>
+                                  </label>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <label class="sm-dropdown__option">
+                                <input type="checkbox">
+                                <div class="sm-dropdown__option__content">
+                                  <span class="sm-dropdown__option__mark"></span>Sixth Forms</div>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="sm-quote__options__item">
+                        <img src="/dist/svg/icon-decision.svg" width="80" height="80">
+                        <span class="sm-quote__options__text">Decision Maker</span>
+                        <div class="form-group">
+                          <input type="text" class="form-control sm-autocomplete">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="sm-quote__page__actions">
+                      <div class="sm-quote__chat-link">I'm not sure yet, can we have a chat?</div>
+                      <button data-slider="next" class="sm-quote__btn sm-quote__btn--next">Next Step</button>
+                      <button data-slider="prev" class="sm-quote__btn">
+                        < Go Back</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="sm-slider__item">
+                <div class="sm-quote__page sm-quote__page--like-to-target">
+
+                  <h3 class="sm-quote__title">My contact details</h3>
+
+                  <div class="sm-quote__content">
+                    <div class="form-group">
+                      <label class="form-label">Full Name</label>
+                      <input type="text" class="form-control" placeholder="My name is">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">My Number is
+                        <span class="is-optional">(Optional)</span>
+                      </label>
+                      <input type="text" class="form-control" placeholder="Type your phone number">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">My Email Address</label>
+                      <input type="text" class="form-control" placeholder="Example: jhon@email.com">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Organization Name</label>
+                      <input type="text" class="form-control" placeholder="Type your company name">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Further Information
+                        <span class="is-optional">(Optional)</span>
+                      </label>
+                      <p class="form-help">Please tell us any additional information about your marketing to schools plans here.</p>
+                      <textarea class="form-control" rows="5" placeholder="Type your your message"></textarea>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input"> Please tick if you are a charity, or agency representing a client
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <div class="form-label">...and two final questions</div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">How many people work in your organisation?
+                        <span class="is-optional">(Optional)</span>
+                      </label>
+                      <select class="form-control form-select">
+                        <option>Select an option</option>
+                        <option>Select</option>
+                        <option>Select</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">How would you describe your marketing to schools knowledge?
+                        <span class="is-optional">(Optional)</span>
+                      </label>
+                      <select class="form-control form-select">
+                        <option>Select an option</option>
+                        <option>Select</option>
+                        <option>Select</option>
+                      </select>
+                    </div>
+                    <div class="sm-quote__page__actions">
+                      <button data-slider="next" class="sm-quote__btn sm-quote__btn--next">Get my quote now</button>
+                      <button data-slider="prev" class="sm-quote__btn">
+                        < Go Back</button>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="sm-slider__item">
+                <div class="sm-quote__page sm-quote__page--like-to-target">
+
+                  <h3 class="sm-quote__title">Thank You</h3>
+
+                  <div class="sm-quote__content">
+                    <img class="sm-quote__avatar" src="/dist/png/pic-sophie.png">
+                    <p>I'm Sophie, your Account Manager.
+                      <br> Thank you for submitting your enquiry - I'll be in touch soon.</p>
+                    <p>In the meantime, why not take a look at our
+                      <br> Education Insights to deepen your marketing to schools knowledge.</p>
+                  </div>
+
+                  <div class="sm-quote__page__actions">
+                    <button class="sm-back-start sm-quote__btn sm-quote__btn--next">
+                      Return to main page</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div class="gaqf-steps-bar-fill"></div>
+
+        <div class="sm-slider__item">
+          <div class="sm-slider" id="slider-3">
+
+            <div class="sm-slider__container">
+
+              <div class="sm-slider__item">
+                <div class="sm-quote__page sm-quote__page--like-to-target">
+
+                  <h3 class="sm-quote__title">My contact details</h3>
+
+                  <div class="sm-quote__content">
+                    <div class="form-group">
+                      <label class="form-label">Full Name</label>
+                      <input type="text" class="form-control" placeholder="My name is">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">My Number is
+                        <span class="is-optional">(Optional)</span>
+                      </label>
+                      <input type="text" class="form-control" placeholder="Type your phone number">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">My Email Address</label>
+                      <input type="text" class="form-control" placeholder="Example: jhon@email.com">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Organization Name</label>
+                      <input type="text" class="form-control" placeholder="Type your company name">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Further Information
+                        <span class="is-optional">(Optional)</span>
+                      </label>
+                      <p class="form-help">Please tell us any additional information about your marketing to schools plans here.</p>
+                      <textarea class="form-control" rows="5" placeholder="Type your your message"></textarea>
+                    </div>
+
+                    <div class="sm-quote__page__actions">
+                      <button data-slider="next" class="sm-quote__btn sm-quote__btn--next">Send</button>
+                      <button id="back-first-forum" class="sm-quote__btn">
+                        < Go Back</button>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="sm-slider__item">
+                <div class="sm-quote__page sm-quote__page--like-to-target">
+
+                  <h3 class="sm-quote__title">Thank You</h3>
+
+                  <div class="sm-quote__content">
+                    <img class="sm-quote__avatar" src="/dist/png/pic-sophie.png">
+                    <p>I'm Sophie, your Account Manager.
+                      <br> Thank you for submitting your enquiry - I'll be in touch soon.</p>
+                    <p>In the meantime, why not take a look at our
+                      <br> Education Insights to deepen your marketing to schools knowledge.</p>
+                  </div>
+
+                  <div class="sm-quote__page__actions">
+                    <button class="sm-back-start sm-quote__btn sm-quote__btn--next">
+                      Return to main page</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-
     </div>
-
-    <div class="gaqf-slider" id="form-slider">
-
-      <div class="gaqf-slider-container">
-        <div class="gaqf-slider-item gaqf-first">
-          <div class="gaqf-content">
-            <h3 class="gaqf-content-title">I'm interested in...</h3>
-            <h4 class="gaqf-content-subhead">Select one or more options below to get started</h4>
-            <div class="gaqf-content-body">
-              <div class="gaqf-content-options">
-                <label data-help="Data Select from over 30,000 Schools, 105 Job titles and 417,000 Named Teachers and Decision Makers" class="gaqf-content-option gaqf-content-option-checkbox is-30">
-                  <input type="checkbox">
-                  <div>
-                    <img class="icon-selected" src="/dist/svg/icon-selected.svg" width="20" height="20">
-                    <img class="icon-inactive" src="/dist/svg/icon-data.svg" width="100" height="100">
-                    <img class="icon-active" src="/dist/svg/icon-data-active.svg" width="100" height="100">
-                    <span>Accessing Schools Data</span>
-                  </div>
-                </label>
-                <label data-help="Email Send your email direct to the inbox of Teachers and Decision Makers" class="gaqf-content-option gaqf-content-option-checkbox is-30">
-                  <input type="checkbox">
-                  <div>
-                    <img class="icon-selected" src="/dist/svg/icon-selected.svg" width="20" height="20">
-                    <img class="icon-inactive" src="/dist/svg/icon-email.svg" width="100" height="100">
-                    <img class="icon-active" src="/dist/svg/icon-email-active.svg" width="100" height="100">
-                    <span>Sending an email campaign</span>
-                  </div>
-                </label>
-                <label data-help="Fulfilment Services to deliver your Marketing Campaign Direct to named Teachers and Decision Makers" class="gaqf-content-option gaqf-content-option-checkbox is-30">
-                  <input type="checkbox">
-                  <div>
-                    <img class="icon-selected" src="/dist/svg/icon-selected.svg" width="20" height="20">
-                    <img class="icon-inactive" src="/dist/svg/icon-post.svg" width="100" height="100">
-                    <img class="icon-active" src="/dist/svg/icon-post-active.svg" width="100" height="100">
-                    <span>Sending a postal email campaign</span>
-                  </div>
-                </label>
-              </div>
-
-              <div class="gaqf-content-help" id="first-help">
-                <span></span>
-              </div>
-
-            </div>
-            <a href="">I'm not sure yet, can we have a chat?</a>
-            <button data-slider="next" class="gaqf-btn gaqf-btn-primary gaqf-btn-blue">Let’s Get Started</button>
-
-            <br>
-            <br>
-            <img class="gaqf-content-avatar" src="/dist/png/pic-michael.png">
-            <p class="gaqf-content-disclaimer">Since 1997, we have worked with education suppliers, charities and agencies across the world to support their
-              marketing to schools campaigns. Trusted by BBC Children In Need, Apple, Oxfam and more</p>
-          </div>
-        </div>
-        <div class="gaqf-slider-item gaqf-second">
-          <div class="gaqf-content">
-            <h3 class="gaqf-content-title">I'd like to target</h3>
-            <h4 class="gaqf-content-subhead">Choose each option all your interest</h4>
-            <div class="gaqf-content-body">
-              <div class="gaqf-content-options">
-                <div class="gaqf-content-option is-50">
-                  <img src="/dist/svg/icon-phase.svg" width="100">
-                  <span>Phase of Education</span>
-                  <div class="form-group">
-                    <div class="dropdown">
-                      <div class="dropdown-handler">Select an option</div>
-                      <ul class="dropdown-options">
-                        <li>
-                          <label class="dropdown-option">
-                            <input type="checkbox">
-                            <div class="dropdown-option-content">All Phases</div>
-                          </label>
-                        </li>
-                        <li>
-                          <div class="dropdown-expand"></div>
-                          <label class="dropdown-option">
-                            <input type="checkbox">
-                            <div class="dropdown-option-content">Primary</div>
-                          </label>
-                          <ul class="dropdown-options is-child">
-                            <li>
-                              <label class="dropdown-option">
-                                <input type="checkbox">
-                                <div class="dropdown-option-content">Option 1</div>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="dropdown-option">
-                                <input type="checkbox">
-                                <div class="dropdown-option-content">Option 2</div>
-                              </label>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <label class="dropdown-option">
-                            <input type="checkbox">
-                            <div class="dropdown-option-content">Sixth Forms</div>
-                          </label>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="gaqf-content-option is-50">
-                  <img src="/dist/svg/icon-school.svg" width="100">
-                  <span>Type of School</span>
-                  <div class="form-group">
-                    <div class="dropdown">
-                      <div class="dropdown-handler">Select an option</div>
-                      <ul class="dropdown-options">
-                        <li>
-                          <label class="dropdown-option">
-                            <input type="checkbox">
-                            <div class="dropdown-option-content">All Phases</div>
-                          </label>
-                        </li>
-                        <li>
-                          <div class="dropdown-expand"></div>
-                          <label class="dropdown-option">
-                            <input type="checkbox">
-                            <div class="dropdown-option-content">Primary</div>
-                          </label>
-                          <ul class="dropdown-options is-child">
-                            <li>
-                              <label class="dropdown-option">
-                                <input type="checkbox">
-                                <div class="dropdown-option-content">Option 1</div>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="dropdown-option">
-                                <input type="checkbox">
-                                <div class="dropdown-option-content">Option 2</div>
-                              </label>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <label class="dropdown-option">
-                            <input type="checkbox">
-                            <div class="dropdown-option-content">Sixth Forms</div>
-                          </label>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="gaqf-content-option is-50">
-                  <img src="/dist/svg/icon-area.svg" width="100">
-                  <span>Area of School</span>
-                  <div class="form-group">
-                    <div class="dropdown">
-                      <div class="dropdown-handler">Select an option</div>
-                      <ul class="dropdown-options">
-                        <li>
-                          <label class="dropdown-option">
-                            <input type="checkbox">
-                            <div class="dropdown-option-content">All Phases</div>
-                          </label>
-                        </li>
-                        <li>
-                          <div class="dropdown-expand"></div>
-                          <label class="dropdown-option">
-                            <input type="checkbox">
-                            <div class="dropdown-option-content">Primary</div>
-                          </label>
-                          <ul class="dropdown-options is-child">
-                            <li>
-                              <label class="dropdown-option">
-                                <input type="checkbox">
-                                <div class="dropdown-option-content">Option 1</div>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="dropdown-option">
-                                <input type="checkbox">
-                                <div class="dropdown-option-content">Option 2</div>
-                              </label>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <label class="dropdown-option">
-                            <input type="checkbox">
-                            <div class="dropdown-option-content">Sixth Forms</div>
-                          </label>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="gaqf-content-option is-50">
-                  <img src="/dist/svg/icon-decision.svg" width="100">
-                  <span>Decision Maker</span>
-                  <div class="form-group">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <a href="">I'm not sure yet, can we have a chat?</a>
-            <button data-slider="next" class="gaqf-btn gaqf-btn-primary gaqf-btn-blue">Next Step</button>
-            <button data-slider="back" class="gaqf-btn gaqf-btn-white">Go Back</button>
-          </div>
-        </div>
-        <div class="gaqf-slider-item gaqf-third">
-          <div class="gaqf-content">
-            <h3 class="gaqf-content-title">My contact details</h3>
-            <div class="gaqf-content-body">
-              <div class="form-group">
-                <label class="form-label">Full Name</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="form-group">
-                <label class="form-label">My Number is</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="form-group">
-                <label class="form-label">My Email Address</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="form-group">
-                <label class="form-label">Organization Name</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="form-group">
-                <label class="form-label">Further Information</label>
-                <p class="form-help">Please tell us any additional information about your marketing to schools plans here.</p>
-                <textarea class="form-control" rows="5"></textarea>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input type="checkbox" class="form-check-input"> Please tick if you are a charity, or agency representing a client
-                </label>
-              </div>
-
-              <div class="form-check">
-                <div class="form-label">...and two final questions</div>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label">How many people work in your organisation?</label>
-                <select class="form-control form-select">
-                  <option>Select an option</option>
-                  <option>Select</option>
-                  <option>Select</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label">How would you describe your marketing to schools knowledge?</label>
-                <select class="form-control form-select">
-                  <option>Select an option</option>
-                  <option>Select</option>
-                  <option>Select</option>
-                </select>
-              </div>
-            </div>
-            <a href="">I'm not sure yet, can we have a chat?</a>
-            <button data-slider="next" class="gaqf-btn gaqf-btn-primary gaqf-btn-blue">Get my quote now</button>
-            <button data-slider="back" class="gaqf-btn gaqf-btn-white">Go Back</button>
-          </div>
-        </div>
-
-        <div class="gaqf-slider-item gaqf-fourth">
-          <div class="gaqf-content">
-            <h3 class="gaqf-content-title">Thank You</h3>
-            <div class="gaqf-content-body">
-              <img class="gaqf-content-avatar" src="/dist/png/pic-sophie.png">
-              <p>I'm Sophie, your Account Manager.
-                <br> Thank you for submitting your enquiry - I'll be in touch soon.</p>
-              <p>In the meantime, why not take a look at our
-                <br> Education Insights to deepen your marketing to schools knowledge.</p>
-            </div>
-            <button class="gaqf-btn gaqf-btn-primary gaqf-btn-blue">Return to main page</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
   </div>
+
   <script src="dist/bundle.js"></script>
 </body>
 

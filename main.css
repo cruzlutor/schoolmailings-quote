@@ -1,48 +1,255 @@
 @import "normalize.css";
+@import "./css/variables.css";
+@import "./css/sm-slider.css";
+@import "./css/sm-steps.css";
+@import "./css/sm-dropdown.css";
 
-:root{
-  --blue: #1D88C1;
-  --grey: #EDEDED;
-  --grey-subhead: #B3B3B3;
-  --grey-form-label: #808080;
-  --grey-form-help: #B3B3B3;
-  --orange: #FF6D33;
-}
 
-/**
- *
- * Section slider styles
- */
-sm-slider {
-  overflow: hidden;
+.sm-quote {
+  position: relative;
+  max-width: 450px;
+  margin: auto;
+  font-family: 'Hind', sans-serif;
 
-  &__container {
-    display: flex;
-    transition: all .5s;
+  /**
+   * Global sm-qiote styles
+   */
+  * {
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+    }
   }
 
-  &__item {
+  a {
+    color: color(var(--blue));
+    font-weight: 500
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .sm-steps {
+    position: absolute;
     width: 100%;
-    flex: 0 0 100%;
-    padding: 0 30px;
+  }
+
+  /* interested page modifier */
+  &__page--interested &__options {
+    input {
+      display: none
+    }
+
+    &__item {
+      width: 30%;
+      cursor: pointer;
+
+      &:hover {
+        .icon-active {
+          display: initial;
+        }
+        .icon-inactive {
+          display: none;
+        }
+      }
+    }
+
+    &__content {
+      position: relative;
+    }
+
+    .icon-active {
+      display: none;
+    }
+    .icon-inactive {
+      display: initial
+    }
+    .icon-selected {
+      position: absolute;
+      right: 15px;
+      top: 20px;
+      display: none
+    }
+  }
+
+  &__page--interested input:checked + &__options {
+    &__content{
+      .icon-active {
+        display: initial;
+      }
+      .icon-inactive {
+        display: none;
+      }
+      .icon-selected {
+        display: block;
+      }
+    }
+  }
+
+  /* like to target */
+  &__page--like-to-target &__options {
+    justify-content: space-around;
+    &__item {
+      /* max-width: 180px; */
+      margin-bottom: 20px;
+      /* padding: 0 10px; */
+    }
+
+    .sm-autocomplete {
+      text-align: left;
+      width: 170px;
+      margin: 10px auto;
+    }
+  }
+
+  &__page {
+    text-align: center;
+    margin-top: 100px;
+    padding: 0 20px;
+  }
+
+  &__page__actions {
+    margin: 20px 0;
+  }
+
+  &__title {
+    color: color(var(--orange));
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 36px;
+    margin: 0px 0 4px;
+  }
+  
+  &__subtitle {
+    font-weight: 300;
+    color: color(var(--grey-2));
+    margin-top: 0px;
+  }
+
+  &__content {
+    padding: 20px 0;
+  }
+   
+  &__help{
+    color: color(var(--orange));
+    min-height: 40px;
+    width: 100%;
+    margin: 10px 0;
+    display: table;
+    &.is-error {
+      color: #ff0000
+    }
+    span {
+      display: table-cell;
+      vertical-align: bottom;
+    }
+  }
+  
+  &__options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__item {
+    }
+      
+    &__text {
+      font-size: 14px;
+      margin-top: 6px;
+      display: block;
+    }
+  }
+
+  &__chat-link {
+    display: block;
+    margin: 10px 0;
+    color: color(var(--blue));
+    font-weight: 500;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__btn {
+    min-width: 260px;
+    border-radius: 24px;
+    padding: 20px 10px;
+    border: 0px;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: white;
+    color: color(var(--blue));
+
+    &--next {
+      color: white;
+      background-color: color(var(--blue));
+    }
+  }
+
+  &__avatar {
+    margin: 20px 0 0;
+    width: 100px;
+  }
+  
+  &__disclaimer {
+    color: #1980C5;
+    font-weight: 500;
+  }
+  .form-check, .form-group  {
+    text-align: left;
+    margin-bottom: 25px;
+  }
+
+  .form-label, .form-check-label {
+    display: inline-block;
+    color: color(var(--grey-form-label));
+  }
+
+  .form-check-label {
+    position: relative;
+    padding-left: 25px;
+  }
+  
+  .form-check-input {
+    position: absolute;
+    left: 0px
+  }
+
+  .form-label {
+    padding-left: 10px;
+  }
+
+  .form-help {
+    color: color(var(--grey-form-help));
+    margin-top: 4px;
+  }
+
+  .form-control {
+    border-radius: 10px;
+    margin-top: 6px;
+    border: 1px #ccc solid;
+    display: block;
+    width: 100%;
+    padding: 6px 15px;
+    outline: none;
+    color: color(var(--grey-form-label));
+  }
+
+  .form-select {
+    width: auto;
+  }
+
+  .is-optional{
+    color: color(var(--grey-2));
+    display: inline-block;
+    padding-left: 8px 
   }
 }
 
-/**
- * Steeps bars
- */
-sm-steps {
-  &__bar {
-    
-  }
-}
-
-/**
- * Dropdown component
- */
-sm-dropdown {
-
-}
 
 .dropdown {
   position: relative;
