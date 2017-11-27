@@ -2,9 +2,10 @@
 
   function animateScroll(){
     var body = $("body, html");
-    if (body.scrollTop() > 0) {
-      $(body).stop().delay(500).animate({ scrollTop: 0 }, 500, 'swing')
-    }
+    body.scrollTo(0)
+    // if (body.scrollTop() > 0) {
+      // $(body).stop().delay(500).animate({ scrollTop: 0 }, 500, 'swing')
+    // }
   }
 
   var methods = {
