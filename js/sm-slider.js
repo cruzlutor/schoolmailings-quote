@@ -18,7 +18,6 @@
       $(this).data('step', step)
       animateScroll();
       return this
-      
     },
 
     goTo: function(options){

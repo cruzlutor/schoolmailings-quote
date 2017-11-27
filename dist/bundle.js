@@ -210,8 +210,9 @@ $(document).on('ready', () => {
 (function ($) {
 
   function animateScroll(){
-    var body = $("body, html");
-    body.scrollTo(0)
+    window.scrollTo(0, 0);
+    // var body = $("body, html");
+    // body.scrollTo(0)
     // if (body.scrollTop() > 0) {
       // $(body).stop().delay(500).animate({ scrollTop: 0 }, 500, 'swing')
     // }
@@ -226,7 +227,6 @@ $(document).on('ready', () => {
       $(this).data('step', step)
       animateScroll();
       return this
-      
     },
 
     goTo: function(options){
