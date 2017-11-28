@@ -845,6 +845,20 @@ template {
               box-shadow: none;
     }
 
+/*like to target */
+
+.sm-quote__page--form .sm-quote__content {
+    max-width: 350px;
+    margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+
+  .sm-quote__page--form .sm-quote__content {
+    max-width: 100%;
+  }
+}
+
 .sm-quote__page {
     text-align: center;
     margin-top: 100px;
@@ -1009,4 +1023,5 @@ template {
 .sm-quote .is-optional {
     color: rgb(179, 179, 179);
     display: inline-block;
+    font-size: 14px;
 }
