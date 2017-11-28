@@ -4,13 +4,33 @@
 @import "./css/sm-steps.css";
 @import "./css/sm-dropdown.css";
 
+::-webkit-placeholder {
+  color: color(var(--grey-2))
+}
+::-webkit-input-placeholder {
+    color: color(var(--grey-2))
+}
+:-moz-placeholder {
+  color: color(var(--grey-2))
+}
+::-moz-placeholder {
+  color: color(var(--grey-2))
+}
+:-ms-input-placeholder {
+  color: color(var(--grey-2))
+}
 
 .sm-quote {
-  position: relative;
+
   max-width: 450px;
+  padding: 0 16px;
   margin: auto;
   font-family: 'Hind', sans-serif;
+  box-sizing: border-box;
 
+  &-wrap {
+    position: relative;
+  }
   /**
    * Global sm-qiote styles
    */
@@ -21,10 +41,10 @@
       outline: none;
     }
   }
-
+  
   a {
     color: color(var(--blue));
-    font-weight: 500
+    font-weight: 500;
   }
 
   p {
@@ -36,8 +56,21 @@
     width: 100%;
   }
 
+  .sm-align-center {
+    text-align: center;
+    display: inline-block;
+  }
+  .sm-link-orange {
+    color: color(var(--orange));
+  }
+
+  .sm-size-14 {
+    font-size: 14px;
+  }
+
   /* interested page modifier */
   &__page--interested &__options {
+    justify-content: space-around;
     input {
       display: none
     }
@@ -46,18 +79,37 @@
       width: 30%;
       cursor: pointer;
 
-      &:hover {
-        .icon-active {
-          display: initial;
+      @media screen and (max-width: 600px) {
+        width: 100%;
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 10px
         }
-        .icon-inactive {
-          display: none;
+      }
+      
+      @media screen and (min-width: 601px) {
+        &:hover {
+          .icon-active {
+            display: initial;
+          }
+          .icon-inactive {
+            display: none;
+          }
         }
       }
     }
 
     &__content {
       position: relative;
+    }
+
+    &__description {
+      width: 80%;
+      margin: 10px auto;
+      color: color(var(--grey-2));
+      @media screen and (min-width: 601px) {
+        display: none;
+      }
     }
 
     .icon-active {
@@ -84,6 +136,9 @@
       }
       .icon-selected {
         display: block;
+        @media screen and (max-width: 600px) {
+          display: none;
+        }
       }
     }
   }
@@ -92,22 +147,52 @@
   &__page--like-to-target &__options {
     justify-content: space-around;
     &__item {
-      /* max-width: 180px; */
       margin-bottom: 20px;
-      /* padding: 0 10px; */
+      width: 170px;
     }
 
-    .sm-autocomplete {
-      text-align: left;
+    .chosen-select {
       width: 170px;
-      margin: 10px auto;
+    }
+
+    .chosen-container .chosen-choices {
+      border: 1px #e1e1e1 solid;
+      margin: 10px 0;
+      padding: 4px 14px 0px;
+      border-radius: 4px;
+      background-image: none;
+      min-height: 30px;
+      max-width: 170px;
+      
+    }
+    .chosen-container .chosen-search-input {
+      height: auto !important;
+      padding: 2px 0 !important;
+      font-size: 14px !important;
+      font-family: 'Hind', sans-serif !important;
+      /* height: 0px !important;
+
+      &:focus {
+        height: auto !important;
+      } */
+    }
+    .chosen-container .search-choice { 
+      background: color(var(--grey));
+      border: 0px;
+      border-radius: 4px;
+      font-size: 12px;
+      padding-left: 10px !important;
+      /* padding: 4px 20px 4px 6px; */
+    }
+    .chosen-container-active .chosen-choices {
+      box-shadow: none;
     }
   }
 
   &__page {
     text-align: center;
     margin-top: 100px;
-    padding: 0 20px;
+    /* padding: 0 20px; */
   }
 
   &__page__actions {
@@ -129,7 +214,7 @@
   }
 
   &__content {
-    padding: 20px 0;
+    /* padding: 20px; */
   }
    
   &__help{
@@ -145,20 +230,27 @@
       display: table-cell;
       vertical-align: bottom;
     }
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
   }
   
   &__options {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 
     &__item {
     }
       
     &__text {
       font-size: 14px;
-      margin-top: 6px;
+      margin: 6px auto 0;
       display: block;
+      /* max-width: 140px; */
     }
   }
 
@@ -234,8 +326,9 @@
     border: 1px #ccc solid;
     display: block;
     width: 100%;
-    padding: 6px 15px;
+    padding: 10px 15px;
     outline: none;
+    font-size: 14px;
     color: color(var(--grey-form-label));
   }
 
@@ -246,6 +339,5 @@
   .is-optional{
     color: color(var(--grey-2));
     display: inline-block;
-    padding-left: 8px 
   }
 }

@@ -525,12 +525,20 @@ template {
   margin: 10px auto;
 }
 
+.sm-dropdown.is-active .sm-dropdown__handler {
+    color: rgb(128, 128, 128) 
+  }
+
 .sm-dropdown__handler {
     border: 1px #e1e1e1 solid;
     padding: 10px 14px 6px;
     border-radius: 4px;
     cursor: pointer;
-    color: rgb(128, 128, 128);
+    color: rgb(179, 179, 179);
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
 .sm-dropdown__handler .fa {
@@ -542,7 +550,7 @@ template {
     margin: 0;
     padding-left: 20px;
     display: none;
-    font-size: 14px
+    font-size: 13px
   }
 
 .sm-dropdown__options:not(.is-child) {
@@ -608,9 +616,9 @@ template {
     }
 
 .sm-dropdown__expand {
-    font-size: 12px;
+    font-size: 10px;
     position: absolute;
-    top: 4px;
+    top: 0;
     right: 0px;
     cursor: pointer;
     color: rgb(128, 128, 128) 
@@ -620,12 +628,39 @@ template {
   content: '\F068';
 }
 
+::-webkit-placeholder {
+  color: rgb(179, 179, 179)
+}
+
+::-webkit-input-placeholder {
+    color: rgb(179, 179, 179)
+}
+
+:-moz-placeholder {
+  color: rgb(179, 179, 179)
+}
+
+::-moz-placeholder {
+  color: rgb(179, 179, 179)
+}
+
+:-ms-input-placeholder {
+  color: rgb(179, 179, 179)
+}
+
 .sm-quote {
-  position: relative;
+
   max-width: 450px;
+  padding: 0 16px;
   margin: auto;
   font-family: 'Hind', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
+.sm-quote-wrap {
+    position: relative;
+  }
 
 /**
    * Global sm-qiote styles
@@ -642,7 +677,7 @@ template {
 
 .sm-quote a {
     color: rgb(29, 136, 193);
-    font-weight: 500
+    font-weight: 500;
   }
 
 .sm-quote p {
@@ -654,7 +689,25 @@ template {
     width: 100%;
   }
 
+.sm-quote .sm-align-center {
+    text-align: center;
+    display: inline-block;
+  }
+
+.sm-quote .sm-link-orange {
+    color: rgb(255, 109, 51);
+  }
+
+.sm-quote .sm-size-14 {
+    font-size: 14px;
+  }
+
 /* interested page modifier */
+
+.sm-quote__page--interested .sm-quote__options {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 
 .sm-quote__page--interested .sm-quote__options input {
       display: none
@@ -662,35 +715,63 @@ template {
 
 .sm-quote__page--interested .sm-quote__options__item {
       width: 30%;
-      cursor: pointer
+      cursor: pointer;
     }
 
-.sm-quote__page--interested .sm-quote__options__item:hover .icon-active {
-          display: initial;
+@media screen and (max-width: 600px) {
+
+  .sm-quote__page--interested .sm-quote__options__item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .sm-quote__page--interested .sm-quote__options__item:last-child {
+    margin-bottom: 10px;
+  }
 }
 
-.sm-quote__page--interested .sm-quote__options__item:hover .icon-inactive {
-          display: none;
+@media screen and (min-width: 601px) {
+
+  .sm-quote__page--interested .sm-quote__options__item:hover .icon-active {
+            display: initial;
+  }
+
+  .sm-quote__page--interested .sm-quote__options__item:hover .icon-inactive {
+            display: none;
+  }
 }
 
 .sm-quote__page--interested .sm-quote__options__content {
       position: relative;
-    }
+}
+
+.sm-quote__page--interested .sm-quote__options__description {
+      width: 80%;
+      margin: 10px auto;
+      color: rgb(179, 179, 179);
+}
+
+@media screen and (min-width: 601px) {
+
+  .sm-quote__page--interested .sm-quote__options__description {
+    display: none;
+  }
+}
 
 .sm-quote__page--interested .sm-quote__options .icon-active {
       display: none;
-    }
+}
 
 .sm-quote__page--interested .sm-quote__options .icon-inactive {
-      display: initial
-    }
+      display: initial;
+}
 
 .sm-quote__page--interested .sm-quote__options .icon-selected {
       position: absolute;
       right: 15px;
       top: 20px;
-      display: none
-    }
+      display: none;
+}
 
 .sm-quote__page--interested input:checked + .sm-quote__options__content .icon-active {
         display: initial;
@@ -704,34 +785,75 @@ template {
         display: block;
       }
 
-/* like to target */
+@media screen and (max-width: 600px) {
+
+  .sm-quote__page--interested input:checked + .sm-quote__options__content .icon-selected {
+    display: none;
+  }
+}
+
+/*like to target */
 
 .sm-quote__page--like-to-target .sm-quote__options {
     -ms-flex-pack: distribute;
         justify-content: space-around;
-  }
+}
 
 .sm-quote__page--like-to-target .sm-quote__options__item {
-      /* max-width: 180px; */
       margin-bottom: 20px;
-      /* padding: 0 10px; */
+      width: 170px;
     }
 
-.sm-quote__page--like-to-target .sm-quote__options .sm-autocomplete {
-      text-align: left;
+.sm-quote__page--like-to-target .sm-quote__options .chosen-select {
       width: 170px;
-      margin: 10px auto;
+    }
+
+.sm-quote__page--like-to-target .sm-quote__options .chosen-container .chosen-choices {
+      border: 1px #e1e1e1 solid;
+      margin: 10px 0;
+      padding: 4px 14px 0px;
+      border-radius: 4px;
+      background-image: none;
+      min-height: 30px;
+      max-width: 170px;
+      
+    }
+
+.sm-quote__page--like-to-target .sm-quote__options .chosen-container .chosen-search-input {
+      height: auto !important;
+      padding: 2px 0 !important;
+      font-size: 14px !important;
+      font-family: 'Hind', sans-serif !important;
+      /* height: 0px !important;
+
+      &:focus {
+        height: auto !important;
+      } */
+    }
+
+.sm-quote__page--like-to-target .sm-quote__options .chosen-container .search-choice { 
+      background: rgb(237, 237, 237);
+      border: 0px;
+      border-radius: 4px;
+      font-size: 12px;
+      padding-left: 10px !important;
+      /* padding: 4px 20px 4px 6px; */
+    }
+
+.sm-quote__page--like-to-target .sm-quote__options .chosen-container-active .chosen-choices {
+      -webkit-box-shadow: none;
+              box-shadow: none;
     }
 
 .sm-quote__page {
     text-align: center;
     margin-top: 100px;
-    padding: 0 20px;
-  }
+    /* padding: 0 20px; */
+}
 
 .sm-quote__page__actions {
     margin: 20px 0;
-  }
+}
 
 .sm-quote__title {
     color: rgb(255, 109, 51);
@@ -739,25 +861,25 @@ template {
     font-weight: 500;
     font-size: 36px;
     margin: 0px 0 4px;
-  }
+}
 
 .sm-quote__subtitle {
     font-weight: 300;
     color: rgb(179, 179, 179);
     margin-top: 0px;
-  }
+}
 
 .sm-quote__content {
-    padding: 20px 0;
-  }
+    /* padding: 20px; */
+}
 
-.sm-quote__help{
+.sm-quote__help {
     color: rgb(255, 109, 51);
     min-height: 40px;
     width: 100%;
     margin: 10px 0;
-    display: table
-  }
+    display: table;
+}
 
 .sm-quote__help.is-error {
   color: #ff0000;
@@ -766,6 +888,13 @@ template {
 .sm-quote__help span {
       display: table-cell;
       vertical-align: bottom;
+}
+
+@media screen and (max-width: 600px) {
+
+  .sm-quote__help {
+    display: none;
+  }
 }
 
 .sm-quote__options {
@@ -777,15 +906,21 @@ template {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-  }
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
 
 .sm-quote__options__item {
     }
 
 .sm-quote__options__text {
       font-size: 14px;
-      margin-top: 6px;
+      margin: 6px auto 0;
       display: block;
+      /* max-width: 140px; */
     }
 
 .sm-quote__chat-link {
@@ -795,7 +930,7 @@ template {
     font-weight: 500;
     text-decoration: underline;
     cursor: pointer;
-  }
+}
 
 .sm-quote__btn {
     min-width: 260px;
@@ -809,7 +944,7 @@ template {
     margin: auto;
     background: white;
     color: rgb(29, 136, 193);
-  }
+}
 
 .sm-quote__btn--next {
       color: white;
@@ -819,41 +954,41 @@ template {
 .sm-quote__avatar {
     margin: 20px 0 0;
     width: 100px;
-  }
+}
 
 .sm-quote__disclaimer {
     color: #1980C5;
     font-weight: 500;
-  }
+}
 
 .sm-quote .form-check, .sm-quote .form-group  {
     text-align: left;
     margin-bottom: 25px;
-  }
+}
 
 .sm-quote .form-label, .sm-quote .form-check-label {
     display: inline-block;
     color: rgb(128, 128, 128);
-  }
+}
 
 .sm-quote .form-check-label {
     position: relative;
     padding-left: 25px;
-  }
+}
 
 .sm-quote .form-check-input {
     position: absolute;
-    left: 0px
-  }
+    left: 0px;
+}
 
 .sm-quote .form-label {
     padding-left: 10px;
-  }
+}
 
 .sm-quote .form-help {
     color: rgb(179, 179, 179);
     margin-top: 4px;
-  }
+}
 
 .sm-quote .form-control {
     border-radius: 10px;
@@ -861,17 +996,17 @@ template {
     border: 1px #ccc solid;
     display: block;
     width: 100%;
-    padding: 6px 15px;
+    padding: 10px 15px;
     outline: none;
+    font-size: 14px;
     color: rgb(128, 128, 128);
-  }
+}
 
 .sm-quote .form-select {
     width: auto;
-  }
+}
 
-.sm-quote .is-optional{
+.sm-quote .is-optional {
     color: rgb(179, 179, 179);
     display: inline-block;
-    padding-left: 8px 
-  }
+}

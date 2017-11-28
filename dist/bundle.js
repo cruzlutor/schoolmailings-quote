@@ -127,9 +127,15 @@ function init() {
     $('#first-help span').html('')
   })
 
-  $('.sm-dropdown').sm_dropdown();
 
+  // activate dropdown
+  $('.sm-dropdown').sm_dropdown()
 
+  //activate autocomplete
+  $(".chosen-select").chosen()
+  // $('.chosen-select').selectize({
+  //   maxItems: 3
+  // });
   // $('#slider-2').sm_slider('goTo', {step: 1});
 
 }
@@ -296,14 +302,37 @@ $(document).on('ready', () => {
 /***/ (function(module, exports) {
 
 (function ($) {
-  var items;
+
+  function close(dropdown) {
+    $('.sm-dropdown__options', dropdown).first().removeClass('is-open')
+    updateSelected(dropdown)
+  }
+
+  function updateSelected(dropdown){
+    var value = ''
+    var found = false
+    $('input:checked', dropdown).each((index, option) => {
+      value += $(option).val() + ', '
+      found = true
+    })
+
+    if (found) {
+      value = value.substring(0, value.length - 2);
+      $(dropdown).addClass('is-active')
+      $('.sm-dropdown__handler', dropdown).html(value)
+    } else {
+      $(dropdown).removeClass('is-active')
+      $('.sm-dropdown__handler', dropdown).html('Select an option')
+    }
+  }
+
   var methods = {
-    init: function(options){
+    init: function (options) {
       var self = this;
-      $(document).mouseup( (e) => {
-        $(self).each( (index, item) => {
+      $(document).mouseup((e) => {
+        $(self).each((index, item) => {
           if (!$(item).is(e.target) && $(item).has(e.target).length === 0) {
-            $('.sm-dropdown__options', item).first().removeClass('is-open')
+            close(item)
           }
         })
       })

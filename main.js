@@ -48,9 +48,15 @@ function init() {
     $('#first-help span').html('')
   })
 
-  $('.sm-dropdown').sm_dropdown();
 
+  // activate dropdown
+  $('.sm-dropdown').sm_dropdown()
 
+  //activate autocomplete
+  $(".chosen-select").chosen()
+  // $('.chosen-select').selectize({
+  //   maxItems: 3
+  // });
   // $('#slider-2').sm_slider('goTo', {step: 1});
 
 }

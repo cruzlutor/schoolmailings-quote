@@ -23,7 +23,9 @@ module.exports = {
   ],
 
   devServer: {
+    disableHostCheck: true,
     publicPath: "/dist/",
+    host: '0.0.0.0',
     compress: true,
     port: 9000
   }

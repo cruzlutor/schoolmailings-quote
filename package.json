@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chosen-js": "^1.8.2",
     "normalize.css": "^7.0.0"
   },
   "devDependencies": {

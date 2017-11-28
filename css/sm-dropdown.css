@@ -4,12 +4,19 @@
   width: 170px;
   margin: 10px auto;
 
+  &.is-active &__handler {
+    color: color(var(--grey-3)) 
+  }
   &__handler {
     border: 1px #e1e1e1 solid;
     padding: 10px 14px 6px;
     border-radius: 4px;
     cursor: pointer;
-    color: color(var(--grey-3));
+    color: color(var(--grey-2));
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     .fa {
       position: absolute;
@@ -21,7 +28,7 @@
     margin: 0;
     padding-left: 20px;
     display: none;
-    font-size: 14px;
+    font-size: 13px;
 
     &:not(.is-child){
       background-color: white;
@@ -87,9 +94,9 @@
     }
   }
   &__expand {
-    font-size: 12px;
+    font-size: 10px;
     position: absolute;
-    top: 4px;
+    top: 0;
     right: 0px;
     cursor: pointer;
     color: color(var(--grey-3));

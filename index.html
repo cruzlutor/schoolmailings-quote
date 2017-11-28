@@ -6,9 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="libs/chosen/chosen.jquery.min.js"></script>
   <link rel='stylesheet' id='fontawesome-css' href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css?ver=4.3.0'
     type='text/css' media='all' />
   <link href="dist/build.css" rel="stylesheet">
+
+  <!--
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/js/standalone/selectize.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/css/selectize.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/css/selectize.default.css" />
+   -->
+
+  <link href="libs/chosen/chosen.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Hind:400,500" rel="stylesheet">
   <title>Document</title>
 </head>
@@ -16,460 +25,646 @@
 <body>
 
   <div class="sm-quote">
+    <div class="sm-quote-wrap">
+      <div class="sm-slider" id="slider-1">
 
-    <div class="sm-slider" id="slider-1">
+        <div class="sm-slider__container">
 
-      <div class="sm-slider__container">
+          <div class="sm-slider__item">
 
-        <div class="sm-slider__item">
+            <div class="sm-slider" id="slider-2">
 
-          <div class="sm-slider" id="slider-2">
-
-            <div id="form-steps" class="sm-steps">
-              <div class="sm-steps__bar">
-                <div class="sm-steps__points">
-                  <div class="sm-steps__point is-active"></div>
-                  <div class="sm-steps__point"></div>
-                  <div class="sm-steps__point"></div>
-                  <div class="sm-steps__point"></div>
+              <div id="form-steps" class="sm-steps">
+                <div class="sm-steps__bar">
+                  <div class="sm-steps__points">
+                    <div class="sm-steps__point is-active"></div>
+                    <div class="sm-steps__point"></div>
+                    <div class="sm-steps__point"></div>
+                    <div class="sm-steps__point"></div>
+                  </div>
+                  <div class="sm-steps__bar__fill"></div>
                 </div>
-                <div class="sm-steps__bar__fill"></div>
+              </div>
+
+              <div class="sm-slider__container">
+
+                <div class="sm-slider__item">
+
+                  <div class="sm-quote__page sm-quote__page--interested">
+                    <h3 class="sm-quote__title">I'm interested in...</h3>
+                    <h4 class="sm-quote__subtitle">Select one or more options below to get started</h4>
+                    <div class="sm-quote__content">
+
+                      <div class="sm-quote__options">
+
+                        <label class="sm-quote__options__item" data-help="Data Select from over 30,000 Schools, 105 Job titles and 417,000 Named Teachers and Decision Makers">
+                          <input type="checkbox">
+                          <div class="sm-quote__options__content">
+                            <img class="icon-selected" src="dist/svg/icon-selected.svg" width="20" height="20">
+                            <img class="icon-inactive" src="dist/svg/icon-data.svg" width="100" height="90">
+                            <img class="icon-active" src="dist/svg/icon-data-active.svg" width="90" height="90">
+                            <span class="sm-quote__options__text">Accessing Schools Data</span>
+                            <p class="sm-quote__options__description">Data Select from over 30,000 Schools, 105 Job titles and 417,000 Named Teachers and Decision Makers</p>
+                          </div>
+                        </label>
+                        <label class="sm-quote__options__item" data-help="Email Send your email direct to the inbox of Teachers and Decision Makers">
+                          <input type="checkbox">
+                          <div class="sm-quote__options__content">
+                            <img class="icon-selected" src="dist/svg/icon-selected.svg" width="20" height="20">
+                            <img class="icon-inactive" src="dist/svg/icon-email.svg" width="90" height="90">
+                            <img class="icon-active" src="dist/svg/icon-email-active.svg" width="90" height="90">
+                            <span class="sm-quote__options__text">Sending an email campaign</span>
+                            <p class="sm-quote__options__description">Email Send your email direct to the inbox of Teachers and Decision Makers</p>
+                          </div>
+                        </label>
+                        <label class="sm-quote__options__item" data-help="Fulfilment Services to deliver your Marketing Campaign Direct to named Teachers and Decision Makers">
+                          <input type="checkbox">
+                          <div class="sm-quote__options__content">
+                            <img class="icon-selected" src="dist/svg/icon-selected.svg" width="20" height="20">
+                            <img class="icon-inactive" src="dist/svg/icon-post.svg" width="90" height="90">
+                            <img class="icon-active" src="dist/svg/icon-post-active.svg" width="90" height="90">
+                            <span class="sm-quote__options__text">Sending a postal email campaign</span>
+                            <p class="sm-quote__options__description">Fulfilment Services to deliver your Marketing Campaign Direct to named Teachers and Decision Makers</p>
+                          </div>
+                        </label>
+                      </div>
+
+                      <div class="sm-quote__help" id="first-help">
+                        <span>Select an option</span>
+                      </div>
+
+                      <div class="sm-quote__page__actions">
+                        <div class="sm-quote__chat-link">I'm not sure yet, can we have a chat?</div>
+                        <button data-slider="next" class="sm-quote__btn sm-quote__btn--next">Let’s Get Started</button>
+                      </div>
+                    </div>
+
+                    <img class="sm-quote__avatar" src="dist/png/pic-michael.png">
+                    <p class="sm-quote__disclaimer">
+                      <i>Since 1997, we have worked with education suppliers, charities and agencies across the world to support
+                        their marketing to schools campaigns. Trusted by BBC Children In Need, Apple, Oxfam and more</i>
+                    </p>
+                  </div>
+
+                </div>
+
+                <div class="sm-slider__item">
+                  <div class="sm-quote__page sm-quote__page--like-to-target">
+
+                    <h3 class="sm-quote__title">I'd like to target</h3>
+                    <h4 class="sm-quote__subtitle">Choose each option all your interest</h4>
+
+                    <div class="sm-quote__content">
+
+                      <div class="sm-quote__options">
+                        <div class="sm-quote__options__item">
+                          <img src="dist/svg/icon-phase.svg" width="80" height="80">
+                          <span class="sm-quote__options__text">Phase of Education</span>
+
+                          <div class="sm-dropdown">
+                            <div class="sm-dropdown__handler">
+                              Select an option
+                              <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </div>
+                            <ul class="sm-dropdown__options">
+                              <li>
+                                <label class="sm-dropdown__option">
+                                  <input type="checkbox" value="All Schools">
+                                  <div class="sm-dropdown__option__content">
+                                    <span class="sm-dropdown__option__mark"></span>All Schools</div>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="sm-dropdown__option">
+                                  <input type="checkbox" value="Primary Schools">
+                                  <div class="sm-dropdown__option__content">
+                                    <span class="sm-dropdown__option__mark"></span>Primary Schools</div>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="sm-dropdown__option">
+                                  <input type="checkbox" value="Secondary Schools">
+                                  <div class="sm-dropdown__option__content">
+                                    <span class="sm-dropdown__option__mark"></span>Secondary Schools</div>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="sm-dropdown__option">
+                                  <input type="checkbox" value="Further Education">
+                                  <div class="sm-dropdown__option__content">
+                                    <span class="sm-dropdown__option__mark"></span>Further Education</div>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="sm-dropdown__option">
+                                  <input type="checkbox" value="Higher Education">
+                                  <div class="sm-dropdown__option__content">
+                                    <span class="sm-dropdown__option__mark"></span>Higher Education</div>
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="sm-quote__options__item">
+                          <img src="dist/svg/icon-school.svg" width="80" height="80">
+                          <span class="sm-quote__options__text">Type of School</span>
+                          <div class="sm-dropdown">
+                            <div class="sm-dropdown__handler">
+                              Select an option
+                              <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </div>
+                            <ul class="sm-dropdown__options">
+                              <li>
+                                <label class="sm-dropdown__option">
+                                  <input type="checkbox" value="All Types">
+                                  <div class="sm-dropdown__option__content">
+                                    <span class="sm-dropdown__option__mark"></span>All Types</div>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="sm-dropdown__option">
+                                  <input type="checkbox" value="Academy Schools">
+                                  <div class="sm-dropdown__option__content">
+                                    <span class="sm-dropdown__option__mark"></span>Academy Schools</div>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="sm-dropdown__option">
+                                  <input type="checkbox" value="Independent Schools">
+                                  <div class="sm-dropdown__option__content">
+                                    <span class="sm-dropdown__option__mark"></span>Independent Schools</div>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="sm-dropdown__option">
+                                  <input type="checkbox" value="Special Schools">
+                                  <div class="sm-dropdown__option__content">
+                                    <span class="sm-dropdown__option__mark"></span>Special Schools</div>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="sm-dropdown__option">
+                                  <input type="checkbox" value="State Schools">
+                                  <div class="sm-dropdown__option__content">
+                                    <span class="sm-dropdown__option__mark"></span>State Schools</div>
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="sm-quote__options__item">
+                          <img src="dist/svg/icon-area.svg" width="80" height="80">
+                          <span class="sm-quote__options__text">Area of School</span>
+                          <div class="sm-dropdown">
+                            <div class="sm-dropdown__handler">
+                              Select an option
+                              <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </div>
+                            <ul class="sm-dropdown__options">
+                              <li>
+                                <div class="sm-dropdown__expand">
+                                  <i class="fa fa-plus" aria-hidden="true"></i>
+                                </div>
+                                <label class="sm-dropdown__option">
+                                  <input type="checkbox" value="All UK">
+                                  <div class="sm-dropdown__option__content">
+                                    <span class="sm-dropdown__option__mark"></span>All UK</div>
+                                </label>
+                                <ul class="sm-dropdown__options is-child">
+                                  <li>
+                                    <div class="sm-dropdown__expand">
+                                      <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </div>
+                                    <label class="sm-dropdown__option">
+                                      <input type="checkbox" value="England">
+                                      <div class="sm-dropdown__option__content">
+                                        <span class="sm-dropdown__option__mark"></span>
+                                        England
+                                      </div>
+                                    </label>
+                                    <ul class="sm-dropdown__options is-child">
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="East Midlands">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            East Midlands
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="East of England">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            East of England
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="London">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            London
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="North East">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            North East
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="North West">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            North West
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Offshore">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            Offshore
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="South East">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            South East
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="South West">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            South West
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="West Midlands">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            West Midlands
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="West Yorkshire & the Humber">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            West Yorkshire & the Humber
+                                          </div>
+                                        </label>
+                                      </li>
+                                    </ul>
+                                  </li>
+                                  <li>
+                                    <label class="sm-dropdown__option">
+                                      <input type="checkbox" value="Wales">
+                                      <div class="sm-dropdown__option__content">
+                                        <span class="sm-dropdown__option__mark"></span>
+                                        Wales
+                                      </div>
+                                    </label>
+                                  </li>
+                                  <li>
+                                    <label class="sm-dropdown__option">
+                                      <input type="checkbox" value="Scotland">
+                                      <div class="sm-dropdown__option__content">
+                                        <span class="sm-dropdown__option__mark"></span>
+                                        Scotland
+                                      </div>
+                                    </label>
+                                  </li>
+                                  <li>
+                                    <label class="sm-dropdown__option">
+                                      <input type="checkbox" value="Northern Ireland">
+                                      <div class="sm-dropdown__option__content">
+                                        <span class="sm-dropdown__option__mark"></span>
+                                        Northern Ireland
+                                      </div>
+                                    </label>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="sm-quote__options__item">
+                          <img src="dist/svg/icon-decision.svg" width="80" height="80">
+                          <span class="sm-quote__options__text">Decision Maker</span>
+                          <div class="form-group">
+                            <select multiple class="form-control form-select sm-autocomplete chosen-select" data-placeholder="Select an option">
+                              <option>Assistant Head Teachers</option>
+                              <option>Attendance Officer</option>
+                              <option>Bursar / Financial Manager / Business Manager</option>
+                              <option>Catering Manager</option>
+                              <option>Chair of governors</option>
+                              <option>Child Protection Officer</option>
+                              <option>Deputy Head</option>
+                              <option>Deputy Head (Curriculum/Teaching and Learning/Academic)</option>
+                              <option>Deputy Head (Pastoral/Behaviour)</option>
+                              <option>EAL (English as an Additional Language)</option>
+                              <option>Exams Officer</option>
+                              <option>EYFS Coordinator</option>
+                              <option>Head of Art</option>
+                              <option>Head of Biology</option>
+                              <option>Head of Business & Economics</option>
+                              <option>Head of Careers / Careers Officer</option>
+                              <option>Head of Chemistry</option>
+                              <option>Head of Chinese</option>
+                              <option>Head of Creative Arts</option>
+                              <option>Head of Dance</option>
+                              <option>Head of Drama</option>
+                              <option>Head of Engineering</option>
+                              <option>Head of English / Literacy Coordinator</option>
+                              <option>Head of Expressive Arts</option>
+                              <option>Head of Food Technology / Nutrition</option>
+                              <option>Head of French</option>
+                              <option>Head of Geography</option>
+                              <option>Head of German</option>
+                              <option>Head of History</option>
+                              <option>Head of Humanities</option>
+                              <option>Head of ICT / ICT Co-ordinator</option>
+                              <option>Head of Key Stage 5</option>
+                              <option>Head of Languages</option>
+                              <option>Head of Maths / Numeracy Coordinator</option>
+                              <option>Head of Media</option>
+                              <option>Head of Music</option>
+                              <option>Head of PE / Sports / Games</option>
+                              <option>Head of Performing Arts</option>
+                              <option>Head of Physics</option>
+                              <option>Head of Politics</option>
+                              <option>Head of Psychology</option>
+                              <option>Head of Religious Studies</option>
+                              <option>Head of Science</option>
+                              <option>Head of Sixth Form</option>
+                              <option>Head of Sociology</option>
+                              <option>Head of Spanish</option>
+                              <option>Head of Special Needs / SENCO / Learning Support</option>
+                              <option>Head of Technology / Design Technology</option>
+                              <option>Head of Year 10 / Year 10 Coordinator / Year 10 Leader</option>
+                              <option>Head of Year 11 / Year 11 Coordinator / Year 11 Leader</option>
+                              <option>Head of Year 7 / Year 7 Coordinator / Year 7 Leader</option>
+                              <option>Head of Year 8 / Year 8 Coordinator / Year 8 Leader</option>
+                              <option>Head of Year 9 / Year 9 Coordinator / Year 9 Leader</option>
+                              <option>Head PA/Head Teachers Assistant</option>
+                              <option>Headteacher / Principal</option>
+                              <option>Health and Safety Manager</option>
+                              <option>IT Manager / Network Technicians</option>
+                              <option>Key Stage 3 Teacher</option>
+                              <option>Key Stage 4 Teacher</option>
+                              <option>KS1 Co-ordinator</option>
+                              <option>KS1 Teachers</option>
+                              <option>KS2 Co-ordinator</option>
+                              <option>KS2 Teachers</option>
+                              <option>KS3 Co-ordinator</option>
+                              <option>KS4 Co-ordinator</option>
+                              <option>Marketing Manager</option>
+                              <option>Parent Teacher Association/PTA</option>
+                              <option>PSHE / Citizenship Leaders</option>
+                              <option>Reception Class Teacher</option>
+                              <option>School Librarian</option>
+                              <option>School Secretary / Administrator</option>
+                              <option>School Visits Coordinator / School Trips Coordinator</option>
+                              <option>Site Manager / Facilities Manager / Caretaker</option>
+                              <option>Swimming Teacher</option>
+                              <option>Teacher of Art</option>
+                              <option>Teacher of Biology</option>
+                              <option>Teacher of Business & Economics</option>
+                              <option>Teacher of Chemistry</option>
+                              <option>Teacher of Creative Arts</option>
+                              <option>Teacher of Dance</option>
+                              <option>Teacher of Drama</option>
+                              <option>Teacher of English / Literacy Coordinator</option>
+                              <option>Teacher of Expressive Arts</option>
+                              <option>Teacher of Food Technology / Nutrition</option>
+                              <option>Teacher of French</option>
+                              <option>Teacher of Geography</option>
+                              <option>Teacher of German</option>
+                              <option>Teacher of History</option>
+                              <option>Teacher of Humanities</option>
+                              <option>Teacher of ICT</option>
+                              <option>Teacher of Languages</option>
+                              <option>Teacher of Maths / Numeracy Coordinator</option>
+                              <option>Teacher of Media</option>
+                              <option>Teacher of Music</option>
+                              <option>Teacher of PE / Sports / Games</option>
+                              <option>Teacher of Performing Arts</option>
+                              <option>Teacher of Physics</option>
+                              <option>Teacher of PSHE / Citizenship Leaders</option>
+                              <option>Teacher of Psychology</option>
+                              <option>Teacher of Religious Studies</option>
+                              <option>Teacher of Science</option>
+                              <option>Teacher of Spanish</option>
+                              <option>Teacher of Special Needs / SENCO / Learning Support</option>
+                              <option>Teacher of Technology / Design Technology</option>
+                              <option>Teacher Training / INSET / Continuous Professional Development (CPD)</option>
+                            </select>
+                            <br>
+                            <a class="sm-link-orange sm-align-center sm-size-14" target="_blank" href="http://www.schoolmailings.com/wp-content/uploads/2017/09/Who-is-Who-is-UK-Schools.pdf">See our list of teachers and decision makers</a>
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="sm-quote__page__actions">
+                        <div class="sm-quote__chat-link">I'm not sure yet, can we have a chat?</div>
+                        <button data-slider="next" class="sm-quote__btn sm-quote__btn--next">Next Step</button>
+                        <button data-slider="prev" class="sm-quote__btn">
+                          < Go Back</button>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="sm-slider__item">
+                  <div class="sm-quote__page sm-quote__page--like-to-target">
+
+                    <h3 class="sm-quote__title">My contact details</h3>
+
+                    <div class="sm-quote__content">
+                      <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="My name is">
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">My Number is &nbsp;
+                          <span class="is-optional">(Optional)</span>
+                        </label>
+                        <input type="text" class="form-control" placeholder="Type your phone number">
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">My Email Address</label>
+                        <input type="text" class="form-control" placeholder="Example: jhon@email.com">
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Organization Name</label>
+                        <input type="text" class="form-control" placeholder="Type your company name">
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Further Information &nbsp;
+                          <span class="is-optional">(Optional)</span>
+                        </label>
+                        <p class="form-help">Please tell us any additional information about your marketing to schools plans here.</p>
+                        <textarea class="form-control" rows="5" placeholder="Type your your message"></textarea>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input"> Please tick if you are a charity, or agency representing a client
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <div class="form-label">...and two final questions</div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">How many people work in your organisation? &nbsp;
+                          <span class="is-optional">(Optional)</span>
+                        </label>
+                        <select class="form-control form-select">
+                          <option>Select an option</option>
+                          <option>Select</option>
+                          <option>Select</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">How would you describe your marketing to schools knowledge? &nbsp;
+                          <span class="is-optional">(Optional)</span>
+                        </label>
+                        <select class="form-control form-select">
+                          <option>Select an option</option>
+                          <option>Select</option>
+                          <option>Select</option>
+                        </select>
+                      </div>
+                      <div class="sm-quote__page__actions">
+                        <button data-slider="next" class="sm-quote__btn sm-quote__btn--next">Get my quote now</button>
+                        <button data-slider="prev" class="sm-quote__btn">
+                          < Go Back</button>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="sm-slider__item">
+                  <div class="sm-quote__page sm-quote__page--like-to-target">
+
+                    <h3 class="sm-quote__title">Thank You</h3>
+
+                    <div class="sm-quote__content">
+                      <img class="sm-quote__avatar" src="dist/png/pic-sophie.png">
+                      <p>I'm Sophie, your Account Manager.
+                        <br> Thank you for submitting your enquiry - I'll be in touch soon.</p>
+                      <p>In the meantime, why not take a look at our
+                        <br>
+                        <a class="sm-link-orange" target="_blank" href="http://www.schoolmailings.com/marketing-resources/">Education Insights</a> to deepen your marketing to schools knowledge.</p>
+                    </div>
+
+                    <div class="sm-quote__page__actions">
+                      <button class="sm-back-start sm-quote__btn sm-quote__btn--next">
+                        Return to main page</button>
+                    </div>
+
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="sm-slider__container">
+          </div>
 
-              <div class="sm-slider__item">
+          <div class="sm-slider__item">
+            <div class="sm-slider" id="slider-3">
 
-                <div class="sm-quote__page sm-quote__page--interested">
-                  <h3 class="sm-quote__title">I'm interested in...</h3>
-                  <h4 class="sm-quote__subtitle">Select one or more options below to get started</h4>
-                  <div class="sm-quote__content">
+              <div class="sm-slider__container">
 
-                    <div class="sm-quote__options">
+                <div class="sm-slider__item">
+                  <div class="sm-quote__page sm-quote__page--like-to-target">
 
-                      <label class="sm-quote__options__item" data-help="Data Select from over 30,000 Schools, 105 Job titles and 417,000 Named Teachers and Decision Makers">
-                        <input type="checkbox">
-                        <div class="sm-quote__options__content">
-                          <img class="icon-selected" src="dist/svg/icon-selected.svg" width="20" height="20">
-                          <img class="icon-inactive" src="dist/svg/icon-data.svg" width="100" height="90">
-                          <img class="icon-active" src="dist/svg/icon-data-active.svg" width="90" height="90">
-                          <span class="sm-quote__options__text">Accessing Schools Data</span>
-                        </div>
-                      </label>
-                      <label class="sm-quote__options__item" data-help="Email Send your email direct to the inbox of Teachers and Decision Makers">
-                        <input type="checkbox">
-                        <div class="sm-quote__options__content">
-                          <img class="icon-selected" src="dist/svg/icon-selected.svg" width="20" height="20">
-                          <img class="icon-inactive" src="dist/svg/icon-email.svg" width="90" height="90">
-                          <img class="icon-active" src="dist/svg/icon-email-active.svg" width="90" height="90">
-                          <span class="sm-quote__options__text">Sending an email campaign</span>
-                        </div>
-                      </label>
-                      <label class="sm-quote__options__item" data-help="Fulfilment Services to deliver your Marketing Campaign Direct to named Teachers and Decision Makers">
-                        <input type="checkbox">
-                        <div class="sm-quote__options__content">
-                          <img class="icon-selected" src="dist/svg/icon-selected.svg" width="20" height="20">
-                          <img class="icon-inactive" src="dist/svg/icon-post.svg" width="90" height="90">
-                          <img class="icon-active" src="dist/svg/icon-post-active.svg" width="90" height="90">
-                          <span class="sm-quote__options__text">Sending a postal email campaign</span>
-                        </div>
-                      </label>
-                    </div>
+                    <h3 class="sm-quote__title">My contact details</h3>
 
-                    <div class="sm-quote__help" id="first-help">
-                      <span>Select an option</span>
-                    </div>
-
-                    <div class="sm-quote__page__actions">
-                      <div class="sm-quote__chat-link">I'm not sure yet, can we have a chat?</div>
-                      <button data-slider="next" class="sm-quote__btn sm-quote__btn--next">Let’s Get Started</button>
-                    </div>
-                  </div>
-
-                  <img class="sm-quote__avatar" src="dist/png/pic-michael.png">
-                  <p class="sm-quote__disclaimer">Since 1997, we have worked with education suppliers, charities and agencies across the world to support
-                    their marketing to schools campaigns. Trusted by BBC Children In Need, Apple, Oxfam and more</p>
-                </div>
-
-              </div>
-
-              <div class="sm-slider__item">
-                <div class="sm-quote__page sm-quote__page--like-to-target">
-
-                  <h3 class="sm-quote__title">I'd like to target</h3>
-                  <h4 class="sm-quote__subtitle">Choose each option all your interest</h4>
-
-                  <div class="sm-quote__content">
-
-                    <div class="sm-quote__options">
-                      <div class="sm-quote__options__item">
-                        <img src="dist/svg/icon-phase.svg" width="80" height="80">
-                        <span class="sm-quote__options__text">Phase of Education</span>
-
-                        <div class="sm-dropdown">
-                          <div class="sm-dropdown__handler">
-                            Select an option
-                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                          </div>
-                          <ul class="sm-dropdown__options">
-                            <li>
-                              <label class="sm-dropdown__option">
-                                <input type="checkbox">
-                                <div class="sm-dropdown__option__content">
-                                  <span class="sm-dropdown__option__mark"></span>
-                                  All Phases
-                                </div>
-                              </label>
-                            </li>
-                            <li>
-                              <div class="sm-dropdown__expand">
-                                <i class="fa fa-plus" aria-hidden="true"></i>
-                              </div>
-                              <label class="sm-dropdown__option">
-                                <input type="checkbox">
-                                <div class="sm-dropdown__option__content">
-                                  <span class="sm-dropdown__option__mark"></span>
-                                  Primary
-                                </div>
-                              </label>
-                              <ul class="sm-dropdown__options is-child">
-                                <li>
-                                  <label class="sm-dropdown__option">
-                                    <input type="checkbox">
-                                    <div class="sm-dropdown__option__content">
-                                      <span class="sm-dropdown__option__mark"></span>
-                                      Option 1
-                                    </div>
-                                  </label>
-                                </li>
-                                <li>
-                                  <label class="sm-dropdown__option">
-                                    <input type="checkbox">
-                                    <div class="sm-dropdown__option__content">
-                                      <span class="sm-dropdown__option__mark"></span>
-                                      Option 2
-                                    </div>
-                                  </label>
-                                </li>
-                              </ul>
-                            </li>
-                            <li>
-                              <label class="sm-dropdown__option">
-                                <input type="checkbox">
-                                <div class="sm-dropdown__option__content">
-                                  <span class="sm-dropdown__option__mark"></span>Sixth Forms</div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
+                    <div class="sm-quote__content">
+                      <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="My name is">
                       </div>
-                      <div class="sm-quote__options__item">
-                        <img src="dist/svg/icon-school.svg" width="80" height="80">
-                        <span class="sm-quote__options__text">Type of School</span>
-                        <div class="sm-dropdown">
-                          <div class="sm-dropdown__handler">
-                            Select an option
-                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                          </div>
-                          <ul class="sm-dropdown__options">
-                            <li>
-                              <label class="sm-dropdown__option">
-                                <input type="checkbox">
-                                <div class="sm-dropdown__option__content">
-                                  <span class="sm-dropdown__option__mark"></span>
-                                  All Phases
-                                </div>
-                              </label>
-                            </li>
-                            <li>
-                              <div class="sm-dropdown__expand">
-                                <i class="fa fa-plus" aria-hidden="true"></i>
-                              </div>
-                              <label class="sm-dropdown__option">
-                                <input type="checkbox">
-                                <div class="sm-dropdown__option__content">
-                                  <span class="sm-dropdown__option__mark"></span>
-                                  Primary
-                                </div>
-                              </label>
-                              <ul class="sm-dropdown__options is-child">
-                                <li>
-                                  <label class="sm-dropdown__option">
-                                    <input type="checkbox">
-                                    <div class="sm-dropdown__option__content">
-                                      <span class="sm-dropdown__option__mark"></span>
-                                      Option 1
-                                    </div>
-                                  </label>
-                                </li>
-                                <li>
-                                  <label class="sm-dropdown__option">
-                                    <input type="checkbox">
-                                    <div class="sm-dropdown__option__content">
-                                      <span class="sm-dropdown__option__mark"></span>
-                                      Option 2
-                                    </div>
-                                  </label>
-                                </li>
-                              </ul>
-                            </li>
-                            <li>
-                              <label class="sm-dropdown__option">
-                                <input type="checkbox">
-                                <div class="sm-dropdown__option__content">
-                                  <span class="sm-dropdown__option__mark"></span>Sixth Forms</div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
+                      <div class="form-group">
+                        <label class="form-label">My Number is &nbsp;
+                          <span class="is-optional">(Optional)</span>
+                        </label>
+                        <input type="text" class="form-control" placeholder="Type your phone number">
                       </div>
-                      <div class="sm-quote__options__item">
-                        <img src="dist/svg/icon-area.svg" width="80" height="80">
-                        <span class="sm-quote__options__text">Area of School</span>
-                        <div class="sm-dropdown">
-                          <div class="sm-dropdown__handler">
-                            Select an option
-                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                          </div>
-                          <ul class="sm-dropdown__options">
-                            <li>
-                              <label class="sm-dropdown__option">
-                                <input type="checkbox">
-                                <div class="sm-dropdown__option__content">
-                                  <span class="sm-dropdown__option__mark"></span>
-                                  All Phases
-                                </div>
-                              </label>
-                            </li>
-                            <li>
-                              <div class="sm-dropdown__expand">
-                                <i class="fa fa-plus" aria-hidden="true"></i>
-                              </div>
-                              <label class="sm-dropdown__option">
-                                <input type="checkbox">
-                                <div class="sm-dropdown__option__content">
-                                  <span class="sm-dropdown__option__mark"></span>
-                                  Primary
-                                </div>
-                              </label>
-                              <ul class="sm-dropdown__options is-child">
-                                <li>
-                                  <label class="sm-dropdown__option">
-                                    <input type="checkbox">
-                                    <div class="sm-dropdown__option__content">
-                                      <span class="sm-dropdown__option__mark"></span>
-                                      Option 1
-                                    </div>
-                                  </label>
-                                </li>
-                                <li>
-                                  <label class="sm-dropdown__option">
-                                    <input type="checkbox">
-                                    <div class="sm-dropdown__option__content">
-                                      <span class="sm-dropdown__option__mark"></span>
-                                      Option 2
-                                    </div>
-                                  </label>
-                                </li>
-                              </ul>
-                            </li>
-                            <li>
-                              <label class="sm-dropdown__option">
-                                <input type="checkbox">
-                                <div class="sm-dropdown__option__content">
-                                  <span class="sm-dropdown__option__mark"></span>Sixth Forms</div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
+                      <div class="form-group">
+                        <label class="form-label">My Email Address</label>
+                        <input type="text" class="form-control" placeholder="Example: jhon@email.com">
                       </div>
-                      <div class="sm-quote__options__item">
-                        <img src="dist/svg/icon-decision.svg" width="80" height="80">
-                        <span class="sm-quote__options__text">Decision Maker</span>
-                        <div class="form-group">
-                          <input type="text" class="form-control sm-autocomplete">
-                        </div>
+                      <div class="form-group">
+                        <label class="form-label">Organization Name</label>
+                        <input type="text" class="form-control" placeholder="Type your company name">
                       </div>
-                    </div>
+                      <div class="form-group">
+                        <label class="form-label">Further Information &nbsp;
+                          <span class="is-optional">(Optional)</span>
+                        </label>
+                        <p class="form-help">Please tell us any additional information about your marketing to schools plans here.</p>
+                        <textarea class="form-control" rows="5" placeholder="Type your your message"></textarea>
+                      </div>
 
-                    <div class="sm-quote__page__actions">
-                      <div class="sm-quote__chat-link">I'm not sure yet, can we have a chat?</div>
-                      <button data-slider="next" class="sm-quote__btn sm-quote__btn--next">Next Step</button>
-                      <button data-slider="prev" class="sm-quote__btn">
-                        < Go Back</button>
+                      <div class="sm-quote__page__actions">
+                        <button data-slider="next" class="sm-quote__btn sm-quote__btn--next">Send</button>
+                        <button id="back-first-forum" class="sm-quote__btn">
+                          < Go Back</button>
+                      </div>
+
                     </div>
 
                   </div>
                 </div>
-              </div>
-              <div class="sm-slider__item">
-                <div class="sm-quote__page sm-quote__page--like-to-target">
 
-                  <h3 class="sm-quote__title">My contact details</h3>
+                <div class="sm-slider__item">
+                  <div class="sm-quote__page sm-quote__page--like-to-target">
 
-                  <div class="sm-quote__content">
-                    <div class="form-group">
-                      <label class="form-label">Full Name</label>
-                      <input type="text" class="form-control" placeholder="My name is">
+                    <h3 class="sm-quote__title">Thank You</h3>
+
+                    <div class="sm-quote__content">
+                      <img class="sm-quote__avatar" src="dist/png/pic-sophie.png">
+                      <p>I'm Sophie, your Account Manager.
+                        <br> Thank you for submitting your enquiry - I'll be in touch soon.</p>
+                      <p>In the meantime, why not take a look at our
+                        <br>
+                        <a class="sm-link-orange" target="_blank" href="http://www.schoolmailings.com/marketing-resources/">Education Insights</a> to deepen your marketing to schools knowledge.</p>
                     </div>
-                    <div class="form-group">
-                      <label class="form-label">My Number is
-                        <span class="is-optional">(Optional)</span>
-                      </label>
-                      <input type="text" class="form-control" placeholder="Type your phone number">
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label">My Email Address</label>
-                      <input type="text" class="form-control" placeholder="Example: jhon@email.com">
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label">Organization Name</label>
-                      <input type="text" class="form-control" placeholder="Type your company name">
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label">Further Information
-                        <span class="is-optional">(Optional)</span>
-                      </label>
-                      <p class="form-help">Please tell us any additional information about your marketing to schools plans here.</p>
-                      <textarea class="form-control" rows="5" placeholder="Type your your message"></textarea>
-                    </div>
-                    <div class="form-check">
-                      <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input"> Please tick if you are a charity, or agency representing a client
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <div class="form-label">...and two final questions</div>
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label">How many people work in your organisation?
-                        <span class="is-optional">(Optional)</span>
-                      </label>
-                      <select class="form-control form-select">
-                        <option>Select an option</option>
-                        <option>Select</option>
-                        <option>Select</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label">How would you describe your marketing to schools knowledge?
-                        <span class="is-optional">(Optional)</span>
-                      </label>
-                      <select class="form-control form-select">
-                        <option>Select an option</option>
-                        <option>Select</option>
-                        <option>Select</option>
-                      </select>
-                    </div>
+
                     <div class="sm-quote__page__actions">
-                      <button data-slider="next" class="sm-quote__btn sm-quote__btn--next">Get my quote now</button>
-                      <button data-slider="prev" class="sm-quote__btn">
-                        < Go Back</button>
+                      <button class="sm-back-start sm-quote__btn sm-quote__btn--next">
+                        Return to main page</button>
                     </div>
 
                   </div>
-
-                </div>
-              </div>
-
-              <div class="sm-slider__item">
-                <div class="sm-quote__page sm-quote__page--like-to-target">
-
-                  <h3 class="sm-quote__title">Thank You</h3>
-
-                  <div class="sm-quote__content">
-                    <img class="sm-quote__avatar" src="dist/png/pic-sophie.png">
-                    <p>I'm Sophie, your Account Manager.
-                      <br> Thank you for submitting your enquiry - I'll be in touch soon.</p>
-                    <p>In the meantime, why not take a look at our
-                      <br> Education Insights to deepen your marketing to schools knowledge.</p>
-                  </div>
-
-                  <div class="sm-quote__page__actions">
-                    <button class="sm-back-start sm-quote__btn sm-quote__btn--next">
-                      Return to main page</button>
-                  </div>
-
                 </div>
               </div>
             </div>
           </div>
 
         </div>
-
-        <div class="sm-slider__item">
-          <div class="sm-slider" id="slider-3">
-
-            <div class="sm-slider__container">
-
-              <div class="sm-slider__item">
-                <div class="sm-quote__page sm-quote__page--like-to-target">
-
-                  <h3 class="sm-quote__title">My contact details</h3>
-
-                  <div class="sm-quote__content">
-                    <div class="form-group">
-                      <label class="form-label">Full Name</label>
-                      <input type="text" class="form-control" placeholder="My name is">
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label">My Number is
-                        <span class="is-optional">(Optional)</span>
-                      </label>
-                      <input type="text" class="form-control" placeholder="Type your phone number">
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label">My Email Address</label>
-                      <input type="text" class="form-control" placeholder="Example: jhon@email.com">
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label">Organization Name</label>
-                      <input type="text" class="form-control" placeholder="Type your company name">
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label">Further Information
-                        <span class="is-optional">(Optional)</span>
-                      </label>
-                      <p class="form-help">Please tell us any additional information about your marketing to schools plans here.</p>
-                      <textarea class="form-control" rows="5" placeholder="Type your your message"></textarea>
-                    </div>
-
-                    <div class="sm-quote__page__actions">
-                      <button data-slider="next" class="sm-quote__btn sm-quote__btn--next">Send</button>
-                      <button id="back-first-forum" class="sm-quote__btn">
-                        < Go Back</button>
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-
-              <div class="sm-slider__item">
-                <div class="sm-quote__page sm-quote__page--like-to-target">
-
-                  <h3 class="sm-quote__title">Thank You</h3>
-
-                  <div class="sm-quote__content">
-                    <img class="sm-quote__avatar" src="dist/png/pic-sophie.png">
-                    <p>I'm Sophie, your Account Manager.
-                      <br> Thank you for submitting your enquiry - I'll be in touch soon.</p>
-                    <p>In the meantime, why not take a look at our
-                      <br> Education Insights to deepen your marketing to schools knowledge.</p>
-                  </div>
-
-                  <div class="sm-quote__page__actions">
-                    <button class="sm-back-start sm-quote__btn sm-quote__btn--next">
-                      Return to main page</button>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
