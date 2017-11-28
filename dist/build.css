@@ -870,7 +870,7 @@ template {
 }
 
 .sm-quote__content {
-    /* padding: 20px; */
+    padding-top: 20px;
 }
 
 .sm-quote__help {
