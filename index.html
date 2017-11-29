@@ -50,83 +50,88 @@
 
                 <div class="sm-slider__item">
 
-                  <div class="sm-quote__page sm-quote__page--interested">
+                  <div id="im-interested-page" class="sm-quote__page sm-quote__page--interested">
                     <h3 class="sm-quote__title">I'm interested in...</h3>
                     <h4 class="sm-quote__subtitle">Select one or more options below to get started</h4>
                     <div class="sm-quote__content">
 
                       <div class="sm-quote__options">
 
-                        <label class="sm-quote__options__item" data-help="Data Select from over 30,000 Schools, 105 Job titles and 417,000 Named Teachers and Decision Makers">
-                          <input type="checkbox">
+                        <label class="sm-quote__options__item" data-help="Select from over 30,000 Schools, 105 Job titles and 417,000 Named Teachers and Decision Makers">
+                          <input type="checkbox" value="Accessing Schools Data">
                           <div class="sm-quote__options__content">
                             <img class="icon-selected" src="dist/svg/icon-selected.svg" width="20" height="20">
                             <img class="icon-inactive" src="dist/svg/icon-data.svg" width="100" height="90">
                             <img class="icon-active" src="dist/svg/icon-data-active.svg" width="90" height="90">
                             <span class="sm-quote__options__text">Accessing Schools Data</span>
-                            <p class="sm-quote__options__description">Data Select from over 30,000 Schools, 105 Job titles and 417,000 Named Teachers and Decision Makers</p>
+                            <p class="sm-quote__options__description">Data Select from over 30,000 Schools, 105 Job titles and 417,000 Named Teachers and Decision
+                              Makers
+                            </p>
                           </div>
                         </label>
-                        <label class="sm-quote__options__item" data-help="Email Send your email direct to the inbox of Teachers and Decision Makers">
-                          <input type="checkbox">
+                        <label class="sm-quote__options__item" data-help="Send your email direct to the inbox of Teachers and Decision Makers">
+                          <input type="checkbox" value="Sending an Mail Campaign">
                           <div class="sm-quote__options__content">
                             <img class="icon-selected" src="dist/svg/icon-selected.svg" width="20" height="20">
                             <img class="icon-inactive" src="dist/svg/icon-email.svg" width="90" height="90">
                             <img class="icon-active" src="dist/svg/icon-email-active.svg" width="90" height="90">
-                            <span class="sm-quote__options__text">Sending an email campaign</span>
+                            <span class="sm-quote__options__text">Sending an Mail Campaign</span>
                             <p class="sm-quote__options__description">Email Send your email direct to the inbox of Teachers and Decision Makers</p>
                           </div>
                         </label>
                         <label class="sm-quote__options__item" data-help="Fulfilment Services to deliver your Marketing Campaign Direct to named Teachers and Decision Makers">
-                          <input type="checkbox">
+                          <input type="checkbox" value="Sending a postal email campaign">
                           <div class="sm-quote__options__content">
                             <img class="icon-selected" src="dist/svg/icon-selected.svg" width="20" height="20">
                             <img class="icon-inactive" src="dist/svg/icon-post.svg" width="90" height="90">
                             <img class="icon-active" src="dist/svg/icon-post-active.svg" width="90" height="90">
-                            <span class="sm-quote__options__text">Sending a postal email campaign</span>
-                            <p class="sm-quote__options__description">Fulfilment Services to deliver your Marketing Campaign Direct to named Teachers and Decision Makers</p>
+                            <span class="sm-quote__options__text">Sending a Postal Email Campaign</span>
+                            <p class="sm-quote__options__description">Fulfilment Services to deliver your Marketing Campaign Direct to named Teachers and Decision
+                              Makers
+                            </p>
                           </div>
                         </label>
                       </div>
 
                       <div class="sm-quote__help" id="first-help">
-                        <span>Select an option</span>
+                        <span></span>
                       </div>
 
                       <div class="sm-quote__page__actions">
                         <div class="sm-quote__chat-link">I'm not sure yet, can we have a chat?</div>
-                        <button data-slider="next" class="sm-quote__btn sm-quote__btn--next">Let’s Get Started</button>
+                        <button id="next-im-interested" class="sm-quote__btn sm-quote__btn--next">Let’s Get Started</button>
                       </div>
                     </div>
 
                     <img class="sm-quote__avatar" src="dist/png/pic-michael.png">
                     <p class="sm-quote__disclaimer">
                       <i>Since 1997, we have worked with education suppliers, charities and agencies across the world to support
-                        their marketing to schools campaigns. Trusted by BBC Children In Need, Apple, Oxfam and more</i>
+                        their marketing to schools campaigns. Trusted by BBC children in need, Apple, Oxfam and more.</i>
                     </p>
                   </div>
 
                 </div>
 
                 <div class="sm-slider__item">
-                  <div class="sm-quote__page sm-quote__page--like-to-target">
+                  <div id="like-target-page" class="sm-quote__page sm-quote__page--like-to-target">
 
                     <h3 class="sm-quote__title">I'd like to target</h3>
-                    <h4 class="sm-quote__subtitle">Choose each option all your interest</h4>
+                    <h4 class="sm-quote__subtitle">Please select your specific targets here</h4>
 
                     <div class="sm-quote__content">
 
                       <div class="sm-quote__options">
+
                         <div class="sm-quote__options__item">
                           <img src="dist/svg/icon-phase.svg" width="80" height="80">
                           <span class="sm-quote__options__text">Phase of Education</span>
 
                           <div class="sm-dropdown">
                             <div class="sm-dropdown__handler">
-                              Select an option
+                              Click here to select
                               <i class="fa fa-angle-down" aria-hidden="true"></i>
                             </div>
-                            <ul class="sm-dropdown__options">
+                            <ul id="phase-education" class="sm-dropdown__options">
                               <li>
                                 <label class="sm-dropdown__option">
                                   <input type="checkbox" value="All Schools">
@@ -168,9 +173,9 @@
                         <div class="sm-quote__options__item">
                           <img src="dist/svg/icon-school.svg" width="80" height="80">
                           <span class="sm-quote__options__text">Type of School</span>
-                          <div class="sm-dropdown">
+                          <div id="type-school" class="sm-dropdown">
                             <div class="sm-dropdown__handler">
-                              Select an option
+                              Click here to select
                               <i class="fa fa-angle-down" aria-hidden="true"></i>
                             </div>
                             <ul class="sm-dropdown__options">
@@ -212,12 +217,12 @@
                             </ul>
                           </div>
                         </div>
-                        <div class="sm-quote__options__item">
+                        <div class="sm-quote__options__item sm-quote__options__item--area">
                           <img src="dist/svg/icon-area.svg" width="80" height="80">
                           <span class="sm-quote__options__text">Area of School</span>
-                          <div class="sm-dropdown">
+                          <div id="area-school" class="sm-dropdown">
                             <div class="sm-dropdown__handler">
-                              Select an option
+                              Click here to select
                               <i class="fa fa-angle-down" aria-hidden="true"></i>
                             </div>
                             <ul class="sm-dropdown__options">
@@ -244,6 +249,9 @@
                                     </label>
                                     <ul class="sm-dropdown__options is-child">
                                       <li>
+                                        <div class="sm-dropdown__expand">
+                                          <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </div>
                                         <label class="sm-dropdown__option">
                                           <input type="checkbox" value="East Midlands">
                                           <div class="sm-dropdown__option__content">
@@ -251,8 +259,96 @@
                                             East Midlands
                                           </div>
                                         </label>
+
+                                        <ul class="sm-dropdown__options is-child">
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Derby">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Derby
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Derbyshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Derbyshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Leicester">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Leicester
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Leicestershire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Leicestershire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Lincolnshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Lincolnshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Northamptonshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Northamptonshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Nottingham">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Nottingham
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Nottinghamshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Nottinghamshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Rutland">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Rutland
+                                              </div>
+                                            </label>
+                                          </li>
+                                        </ul>
+
                                       </li>
                                       <li>
+                                        <div class="sm-dropdown__expand">
+                                          <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </div>
                                         <label class="sm-dropdown__option">
                                           <input type="checkbox" value="East of England">
                                           <div class="sm-dropdown__option__content">
@@ -260,8 +356,112 @@
                                             East of England
                                           </div>
                                         </label>
+                                        <ul class="sm-dropdown__options is-child">
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Bedford">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Bedford
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Cambridgeshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Cambridgeshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Central Bedfordshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Central Bedfordshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Essex">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Essex
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Hertfordshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Hertfordshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Luton">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Luton
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Norfolk">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Norfolk
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Southend-on-Sea">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Southend-on-Sea
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Suffolk">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Suffolk
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Thurrock">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Thurrock
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Peterborough">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Peterborough
+                                              </div>
+                                            </label>
+                                          </li>
+                                        </ul>
                                       </li>
                                       <li>
+                                        <div class="sm-dropdown__expand">
+                                          <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </div>
                                         <label class="sm-dropdown__option">
                                           <input type="checkbox" value="London">
                                           <div class="sm-dropdown__option__content">
@@ -269,8 +469,310 @@
                                             London
                                           </div>
                                         </label>
+                                        <ul class="sm-dropdown__options is-child">
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Barking and Dagenham">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Barking and Dagenham
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Barnet">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Barnet
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Bexley">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Bexley
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Brent">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Brent
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Bromley">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Bromley
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Camden">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Camden
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="City of London">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                City of London
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Croydon">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Croydon
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Ealing">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Ealing
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Enfield">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Enfield
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Greenwich">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Greenwich
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Hackney">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Hackney
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Hammersmith and Fulham">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Hammersmith and Fulham
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Haringey">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Haringey
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Harrow">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Harrow
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Havering">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Havering
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Hillingdon">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Hillingdon
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Hounslow">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Hounslow
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Islington">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Islington
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Kensington and Chelsea">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Kensington and Chelsea
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Kingston upon Thames">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Kingston upon Thames
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Lambeth">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Lambeth
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Lewisham">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Lewisham
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Merton">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Merton
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Newham">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Newham
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Redbridge">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Redbridge
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Richmond upon Thames">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Richmond upon Thames
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Southwark">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Southwark
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Sutton">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Sutton
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Tower Hamlets">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Tower Hamlets
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Waltham Forest">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Waltham Forest
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Wandsworth">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Wandsworth
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Westminster">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Westminster
+                                              </div>
+                                            </label>
+                                          </li>
+                                        </ul>
                                       </li>
                                       <li>
+                                        <div class="sm-dropdown__expand">
+                                          <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </div>
                                         <label class="sm-dropdown__option">
                                           <input type="checkbox" value="North East">
                                           <div class="sm-dropdown__option__content">
@@ -278,8 +780,121 @@
                                             North East
                                           </div>
                                         </label>
+                                        <ul class="sm-dropdown__options is-child">
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Darlington">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Darlington
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Durham">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Durham
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Gateshead">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Gateshead
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Hartlepool">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Hartlepool
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Middlesbrough">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Middlesbrough
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Newcastle upon Tyne">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Newcastle upon Tyne
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="North Tyneside">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                North Tyneside
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Northumberland">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Northumberland
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Redcar and Cleveland">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Redcar and Cleveland
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="South Tyneside">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                South Tyneside
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Stockton-on-Tees">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Stockton-on-Tees
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Sunderland">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Sunderland
+                                              </div>
+                                            </label>
+                                          </li>
+                                        </ul>
                                       </li>
                                       <li>
+                                        <div class="sm-dropdown__expand">
+                                          <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </div>
                                         <label class="sm-dropdown__option">
                                           <input type="checkbox" value="North West">
                                           <div class="sm-dropdown__option__content">
@@ -287,8 +902,229 @@
                                             North West
                                           </div>
                                         </label>
+                                        <ul class="sm-dropdown__options is-child">
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Blackburn with Darwen">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Blackburn with Darwen
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Blackpool">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Blackpool
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Bolton">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Bolton
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Bury">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Bury
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Cheshire East">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Cheshire East
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Cheshire West and Chester">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Cheshire West and Chester
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Cumbria">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Cumbria
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Halton">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Halton
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Knowsley">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Knowsley
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Lancashire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Lancashire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Liverpool">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Liverpool
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Manchester">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Manchester
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Oldham">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Oldham
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Rochdale">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Rochdale
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Salford">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Salford
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Sefton">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Sefton
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Shropshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Shropshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="St. Helens">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                St. Helens
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Stockport">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Stockport
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Tameside">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Tameside
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Trafford">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Trafford
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Warrington">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Warrington
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Wigan">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Wigan
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Wirral">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Wirral
+                                              </div>
+                                            </label>
+                                          </li>
+                                        </ul>
                                       </li>
                                       <li>
+                                        <div class="sm-dropdown__expand">
+                                          <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </div>
                                         <label class="sm-dropdown__option">
                                           <input type="checkbox" value="Offshore">
                                           <div class="sm-dropdown__option__content">
@@ -296,8 +1132,58 @@
                                             Offshore
                                           </div>
                                         </label>
+                                        <ul class="sm-dropdown__options is-child">
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Gibraltar Overseas Establishments">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Gibraltar Overseas Establishments
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Guernsey Offshore Establishments">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Guernsey Offshore Establishments
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Isle of Man Offshore Establishments">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Isle of Man Offshore Establishments
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Jersey Offshore Establishments">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Jersey Offshore Establishments
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Scotland Offshore Establishments">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Scotland Offshore Establishments
+                                              </div>
+                                            </label>
+                                          </li>
+                                        </ul>
                                       </li>
                                       <li>
+                                        <div class="sm-dropdown__expand">
+                                          <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </div>
                                         <label class="sm-dropdown__option">
                                           <input type="checkbox" value="South East">
                                           <div class="sm-dropdown__option__content">
@@ -305,8 +1191,184 @@
                                             South East
                                           </div>
                                         </label>
+                                        <ul class="sm-dropdown__options is-child">
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Bracknell Forest">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Bracknell Forest
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Brighton and Hove">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Brighton and Hove
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Buckinghamshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Buckinghamshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="East Sussex">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 East Sussex
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Hampshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Hampshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Isle of Wight">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Isle of Wight
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Kent">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Kent
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Medway">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Medway
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Milton Keynes">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Milton Keynes
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Oxfordshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Oxfordshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Portsmouth">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Portsmouth
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Reading">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Reading
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Slough">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Slough
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Southampton">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Southampton
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Surrey">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Surrey
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="West Berkshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 West Berkshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="West Sussex">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 West Sussex
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Windsor and Maidenhead">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Windsor and Maidenhead
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Wokingham">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Wokingham
+                                              </div>
+                                            </label>
+                                          </li>
+                                        </ul>
                                       </li>
                                       <li>
+                                        <div class="sm-dropdown__expand">
+                                          <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </div>
                                         <label class="sm-dropdown__option">
                                           <input type="checkbox" value="South West">
                                           <div class="sm-dropdown__option__content">
@@ -314,8 +1376,157 @@
                                             South West
                                           </div>
                                         </label>
+                                        <ul class="sm-dropdown__options is-child">
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Bath and North East Somerset">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Bath and North East Somerset
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Bournemouth">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Bournemouth
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Bristol City of">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Bristol City of
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Cornwall">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Cornwall
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Devon">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Devon
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Dorset">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Dorset
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Gloucestershire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Gloucestershire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Isles Of Scilly">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Isles Of Scilly
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="North Somerset">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 North Somerset
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Plymouth">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Plymouth
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Poole">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Poole
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Somerset">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Somerset
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="South Gloucestershire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 South Gloucestershire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Swindon">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Swindon
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Torbay">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Torbay
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Wiltshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Wiltshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                        </ul>
                                       </li>
                                       <li>
+                                        <div class="sm-dropdown__expand">
+                                          <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </div>
                                         <label class="sm-dropdown__option">
                                           <input type="checkbox" value="West Midlands">
                                           <div class="sm-dropdown__option__content">
@@ -323,8 +1534,139 @@
                                             West Midlands
                                           </div>
                                         </label>
+                                        <ul class="sm-dropdown__options is-child">
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Birmingham">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Birmingham
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Coventry">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Coventry
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Dudley">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Dudley
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Herefordshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Herefordshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Sandwell">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Sandwell
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Shropshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Shropshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Solihull">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Solihull
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Staffordshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Staffordshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Stoke-on-Trent">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Stoke-on-Trent
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Telford and Wrekin">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Telford and Wrekin
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Walsall">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Walsall
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Warwickshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Warwickshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Wolverhampton">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Wolverhampton
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Worcestershire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Worcestershire
+                                              </div>
+                                            </label>
+                                          </li>
+                                        </ul>
                                       </li>
                                       <li>
+                                        <div class="sm-dropdown__expand">
+                                          <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </div>
                                         <label class="sm-dropdown__option">
                                           <input type="checkbox" value="West Yorkshire & the Humber">
                                           <div class="sm-dropdown__option__content">
@@ -332,10 +1674,150 @@
                                             West Yorkshire & the Humber
                                           </div>
                                         </label>
+                                        <ul class="sm-dropdown__options is-child">
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Barnsley">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Barnsley
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Bradford">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Bradford
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Calderdale">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Calderdale
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Doncaster">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                Doncaster
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="East Riding of Yorkshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 East Riding of Yorkshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Kingston upon Hull">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Kingston upon Hull
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Kirklees">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Kirklees
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Leeds">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Leeds
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="North East Lincolnshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 North East Lincolnshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="North Lincolnshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 North Lincolnshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="North Yorkshire">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 North Yorkshire
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Rotherham">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Rotherham
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Sheffield">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Sheffield
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="Wakefield">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 Wakefield
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li>
+                                            <label class="sm-dropdown__option">
+                                              <input type="checkbox" value="York">
+                                              <div class="sm-dropdown__option__content">
+                                                <span class="sm-dropdown__option__mark"></span>
+                                                 York
+                                              </div>
+                                            </label>
+                                          </li>
+                                        </ul>
                                       </li>
                                     </ul>
                                   </li>
                                   <li>
+                                    <div class="sm-dropdown__expand">
+                                      <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </div>
                                     <label class="sm-dropdown__option">
                                       <input type="checkbox" value="Wales">
                                       <div class="sm-dropdown__option__content">
@@ -343,8 +1825,211 @@
                                         Wales
                                       </div>
                                     </label>
+                                    <ul class="sm-dropdown__options is-child">
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Blaenau Gwent">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            Blaenau Gwent
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Bridgend">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            Bridgend
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Caerphilly">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            Caerphilly
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Cardiff">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Cardiff
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Carmarthenshire">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Carmarthenshire
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Ceredigion">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Ceredigion
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Conwy">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Conwy
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Denbighshire">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Denbighshire
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Flintshire">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Flintshire
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Gwynedd">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Gwynedd
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Isle of Anglesey">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Isle of Anglesey
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Merthyr Tydfil">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Merthyr Tydfil
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Monmouthshire">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Monmouthshire
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Neath Port Talbot">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Neath Port Talbot
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Newport">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Newport
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Pembrokeshire">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Pembrokeshire
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Powys">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Powys
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Rhondda, Cynon, Taff">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Rhondda, Cynon, Taff
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Swansea">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Swansea
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="The Vale of Glamorgan">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             The Vale of Glamorgan
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Torfaen">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Torfaen
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Wrexham">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Wrexham
+                                          </div>
+                                        </label>
+                                      </li>
+                                    </ul>
                                   </li>
                                   <li>
+                                    <div class="sm-dropdown__expand">
+                                      <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </div>
                                     <label class="sm-dropdown__option">
                                       <input type="checkbox" value="Scotland">
                                       <div class="sm-dropdown__option__content">
@@ -352,8 +2037,310 @@
                                         Scotland
                                       </div>
                                     </label>
+                                    <ul class="sm-dropdown__options is-child">
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Aberdeen City">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            Aberdeen City
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Aberdeenshire">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            Aberdeenshire
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Angus">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            Angus
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Argyll & Bute">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            Argyll & Bute
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Clackmannanshire">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            Clackmannanshire
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Dumfries & Galloway">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            Dumfries & Galloway
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Dundee City">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            Dundee City
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="East Ayrshire">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            East Ayrshire
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="East Dunbartonshire">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            East Dunbartonshire
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="East Lothian">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            East Lothian
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="East Renfrewshire">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            East Renfrewshire
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Edinburgh City">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            Edinburgh City
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Eilean Siar">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            Eilean Siar
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Falkirk">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            Falkirk
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Fife">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            Fife
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Glasgow City">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Glasgow City
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Grant-maintained">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Grant-maintained
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Highland">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Highland
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Inverclyde">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Inverclyde
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Midlothian">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Midlothian
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Moray">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Moray
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="North Ayrshire">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             North Ayrshire
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="North Lanarkshire">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             North Lanarkshire
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Orkney Islands">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Orkney Islands
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Perth & Kinross">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Perth & Kinross
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Renfrewshire">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Renfrewshire
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Scottish Borders">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Scottish Borders
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Shetland Islands">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Shetland Islands
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="South Ayrshire">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             South Ayrshire
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="South Lanarkshire">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             South Lanarkshire
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Stirling">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             Stirling
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="West Dunbartonshire">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             West Dunbartonshire
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="West Lothian">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                             West Lothian
+                                          </div>
+                                        </label>
+                                      </li>
+                                    </ul>
                                   </li>
                                   <li>
+                                    <div class="sm-dropdown__expand">
+                                      <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </div>
                                     <label class="sm-dropdown__option">
                                       <input type="checkbox" value="Northern Ireland">
                                       <div class="sm-dropdown__option__content">
@@ -361,6 +2348,53 @@
                                         Northern Ireland
                                       </div>
                                     </label>
+                                    <ul class="sm-dropdown__options is-child">
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Belfast">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            Belfast
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="North Eastern">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            North Eastern
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="South Eastern">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            South Eastern
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Southern">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            Southern
+                                          </div>
+                                        </label>
+                                      </li>
+                                      <li>
+                                        <label class="sm-dropdown__option">
+                                          <input type="checkbox" value="Western">
+                                          <div class="sm-dropdown__option__content">
+                                            <span class="sm-dropdown__option__mark"></span>
+                                            Western
+                                          </div>
+                                        </label>
+                                      </li>
+                                    </ul>
                                   </li>
                                 </ul>
                               </li>
@@ -371,7 +2405,7 @@
                           <img src="dist/svg/icon-decision.svg" width="80" height="80">
                           <span class="sm-quote__options__text">Decision Maker</span>
                           <div class="form-group">
-                            <select multiple class="form-control form-select sm-autocomplete chosen-select" data-placeholder="Select an option">
+                            <select id="decision-maker" multiple class="form-control form-select sm-autocomplete chosen-select" data-placeholder="Click here to select">
                               <option>Assistant Head Teachers</option>
                               <option>Attendance Officer</option>
                               <option>Bursar / Financial Manager / Business Manager</option>
@@ -483,11 +2517,16 @@
 
                           </div>
                         </div>
+
+                      </div>
+
+                      <div class="sm-quote__help" id="second-help">
+                        <span></span>
                       </div>
 
                       <div class="sm-quote__page__actions">
                         <div class="sm-quote__chat-link">I'm not sure yet, can we have a chat?</div>
-                        <button data-slider="next" class="sm-quote__btn sm-quote__btn--next">Next Step</button>
+                        <button id="next-like-target" class="sm-quote__btn sm-quote__btn--next">Next Step</button>
                         <button data-slider="prev" class="sm-quote__btn">
                           < Go Back</button>
                       </div>
@@ -501,63 +2540,68 @@
                     <h3 class="sm-quote__title">My contact details</h3>
 
                     <div class="sm-quote__content">
-                      <div class="form-group">
-                        <label class="form-label">Full Name</label>
-                        <input type="text" class="form-control" placeholder="My name is">
-                      </div>
-                      <div class="form-group">
-                        <label class="form-label">My Number is &nbsp;
-                          <span class="is-optional">(Optional)</span>
-                        </label>
-                        <input type="text" class="form-control" placeholder="Type your phone number">
-                      </div>
-                      <div class="form-group">
-                        <label class="form-label">My Email Address</label>
-                        <input type="text" class="form-control" placeholder="Example: jhon@email.com">
-                      </div>
-                      <div class="form-group">
-                        <label class="form-label">Organization Name</label>
-                        <input type="text" class="form-control" placeholder="Type your company name">
-                      </div>
-                      <div class="form-group">
-                        <label class="form-label">Further Information &nbsp;
-                          <span class="is-optional">(Optional)</span>
-                        </label>
-                        <p class="form-help">Please tell us any additional information about your marketing to schools plans here.</p>
-                        <textarea class="form-control" rows="5" placeholder="Type your your message"></textarea>
-                      </div>
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input"> Please tick if you are a charity, or agency representing a client
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <div class="form-label">...and two final questions</div>
-                      </div>
-                      <div class="form-group">
-                        <label class="form-label">How many people work in your organisation? &nbsp;
-                          <span class="is-optional">(Optional)</span>
-                        </label>
-                        <select class="form-control form-select">
-                          <option>Select an option</option>
-                          <option>I work on my own</option>
-                          <option>I work for a small to medium organisation</option>
-                          <option>I work for a large organisation</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <label class="form-label">How would you describe your marketing to schools knowledge? &nbsp;
-                          <span class="is-optional">(Optional)</span>
-                        </label>
-                        <select class="form-control form-select">
-                          <option>Select an option</option>
-                          <option>I'm a novice at marketing to schools</option>
-                          <option>I've done a bit of marketing to schools</option>
-                          <option>I regularly market to schools</option>
-                        </select>
-                      </div>
+                      <form id="contact-details-form">
+                        <div class="form-group">
+                          <label class="form-label">Full Name</label>
+                          <input name="full-name" type="text" class="form-control" placeholder="My name is">
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label">My Number is &nbsp;
+                            <span class="is-optional">(Optional)</span>
+                          </label>
+                          <input name="number" type="text" class="form-control" placeholder="Type your phone number">
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label">My Email Address</label>
+                          <input name="email" type="text" class="form-control" placeholder="Example: jhon@email.com">
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label">Organisation Name</label>
+                          <input name="organisation" type="text" class="form-control" placeholder="Type your company name">
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label">Further Information &nbsp;
+                            <span class="is-optional">(Optional)</span>
+                          </label>
+                          <p class="form-help">Please tell us any additional information about your marketing to schools plans here.</p>
+                          <textarea name="information" class="form-control" rows="5" placeholder="Type your message"></textarea>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="checkbox" name="charity_agency" value="Yes" class="form-check-input"> Please tick if you are a charity, or agency representing a client
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <div class="form-label sm-color-dark">...and two final questions</div>
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label sm-color-dark">How many people work in your organisation? &nbsp;
+                            <span class="is-optional">(Optional)</span>
+                          </label>
+                          <select name="people_organisation" class="form-control form-select">
+                            <option>Select an option</option>
+                            <option>I work on my own</option>
+                            <option>I work for a small to medium organisation</option>
+                            <option>I work for a large organisation</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label sm-color-dark">How would you describe your marketing to schools knowledge? &nbsp;
+                            <span class="is-optional">(Optional)</span>
+                          </label>
+                          <select name="marketing_knowledge" class="form-control form-select">
+                            <option>Select an option</option>
+                            <option>I'm a novice at marketing to schools</option>
+                            <option>I've done a bit of marketing to schools</option>
+                            <option>I regularly market to schools</option>
+                          </select>
+                        </div>
+                        <div class="sm-quote__help" id="contact-details-help">
+                          <span></span>
+                        </div>
+                      </form>
                       <div class="sm-quote__page__actions">
-                        <button data-slider="next" class="sm-quote__btn sm-quote__btn--next">Get my quote now</button>
+                        <button id="next-contact-details" class="sm-quote__btn sm-quote__btn--next">Get my quote now</button>
                         <button data-slider="prev" class="sm-quote__btn">
                           < Go Back</button>
                       </div>
@@ -583,7 +2627,7 @@
 
                     <div class="sm-quote__page__actions">
                       <button class="sm-back-start sm-quote__btn sm-quote__btn--next">
-                        Return to main page</button>
+                        ‘Go to Education Insights</button>
                     </div>
 
                   </div>
@@ -619,7 +2663,7 @@
                         <input type="text" class="form-control" placeholder="Example: jhon@email.com">
                       </div>
                       <div class="form-group">
-                        <label class="form-label">Organization Name</label>
+                        <label class="form-label">Organisation Name</label>
                         <input type="text" class="form-control" placeholder="Type your company name">
                       </div>
                       <div class="form-group">
@@ -631,7 +2675,7 @@
                       </div>
 
                       <div class="sm-quote__page__actions">
-                        <button data-slider="next" class="sm-quote__btn sm-quote__btn--next">Send</button>
+                        <button class="sm-quote__btn sm-quote__btn--next">Send</button>
                         <button id="back-first-forum" class="sm-quote__btn">
                           < Go Back</button>
                       </div>
@@ -657,7 +2701,7 @@
 
                     <div class="sm-quote__page__actions">
                       <button class="sm-back-start sm-quote__btn sm-quote__btn--next">
-                        Return to main page</button>
+                        Go to Education Insights</button>
                     </div>
 
                   </div>

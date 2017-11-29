@@ -19,7 +19,7 @@
       $('.sm-dropdown__handler', dropdown).html(value)
     } else {
       $(dropdown).removeClass('is-active')
-      $('.sm-dropdown__handler', dropdown).html('Select an option')
+      $('.sm-dropdown__handler', dropdown).html('Click here to select')
     }
   }
 
