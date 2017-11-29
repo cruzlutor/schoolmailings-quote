@@ -31,10 +31,10 @@ function init() {
   })
 
   // // slider next button
-  // $('#slider-2 [data-slider]').on('click', (event) => {
-  //   $('#slider-2').sm_slider('move', { direction: $(event.target).data('slider') })
-  //   $('#form-steps').sm_steps('move', { step: $('#slider-2').data('step') })
-  // })
+  $('#slider-2 [data-previus]').on('click', (event) => {
+    $('#slider-2').sm_slider('move', { direction: 'prev' })
+    $('#form-steps').sm_steps('move', { step: $('#slider-2').data('step') })
+  })
 
   // // slider next button
   // $('#slider-3 [data-slider]').on('click', (event) => {
@@ -127,6 +127,24 @@ function validateContactDetails(){
   for (var i = 0; i < data.length; i++) {
     form['contact_details'][data[i]['name']] = data[i]['value'];
   }
+  var valid = true;
+
+  $('#contact-details-form input[required]').each(function () { if ($(this).val() == '') valid = false; })
+
+  if (!isEmail(form['contact_details']['email'])){
+    valid = false;
+    console.log('validate email')
+  } 
+
+  if (valid) {
+    $('#slider-2').sm_slider('goTo', { step: 3 })
+    $('#form-steps').sm_steps('move', { step: $('#slider-2').data('step') })
+  }
+}
+
+function isEmail(email) {
+  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  return regex.test(email);
 }
 
 $(document).on('ready', () => {

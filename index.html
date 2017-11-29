@@ -2527,7 +2527,7 @@
                       <div class="sm-quote__page__actions">
                         <div class="sm-quote__chat-link">I'm not sure yet, can we have a chat?</div>
                         <button id="next-like-target" class="sm-quote__btn sm-quote__btn--next">Next Step</button>
-                        <button data-slider="prev" class="sm-quote__btn">
+                        <button data-previus class="sm-quote__btn">
                           < Go Back</button>
                       </div>
 
@@ -2540,10 +2540,10 @@
                     <h3 class="sm-quote__title">My contact details</h3>
 
                     <div class="sm-quote__content">
-                      <form id="contact-details-form">
+                      <form id="contact-details-form" novalidate>
                         <div class="form-group">
                           <label class="form-label">Full Name</label>
-                          <input name="full-name" type="text" class="form-control" placeholder="My name is">
+                          <input name="full-name" type="text" class="form-control" placeholder="My name is" required>
                         </div>
                         <div class="form-group">
                           <label class="form-label">My Number is &nbsp;
@@ -2553,11 +2553,11 @@
                         </div>
                         <div class="form-group">
                           <label class="form-label">My Email Address</label>
-                          <input name="email" type="text" class="form-control" placeholder="Example: jhon@email.com">
+                          <input name="email" type="text" class="form-control" placeholder="Example: jhon@email.com" required>
                         </div>
                         <div class="form-group">
                           <label class="form-label">Organisation Name</label>
-                          <input name="organisation" type="text" class="form-control" placeholder="Type your company name">
+                          <input name="organisation" type="text" class="form-control" placeholder="Type your company name" required>
                         </div>
                         <div class="form-group">
                           <label class="form-label">Further Information &nbsp;
@@ -2602,7 +2602,7 @@
                       </form>
                       <div class="sm-quote__page__actions">
                         <button id="next-contact-details" class="sm-quote__btn sm-quote__btn--next">Get my quote now</button>
-                        <button data-slider="prev" class="sm-quote__btn">
+                        <button data-previus class="sm-quote__btn">
                           < Go Back</button>
                       </div>
 
@@ -2627,7 +2627,7 @@
 
                     <div class="sm-quote__page__actions">
                       <button class="sm-back-start sm-quote__btn sm-quote__btn--next">
-                        ‘Go to Education Insights</button>
+                        Go to Education Insights</button>
                     </div>
 
                   </div>
