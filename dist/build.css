@@ -548,7 +548,7 @@ template {
 
 .sm-dropdown__options {
     margin: 0;
-    padding-left: 20px;
+    padding-left: 14px;
     display: none;
     font-size: 13px
   }
@@ -557,7 +557,7 @@ template {
   background-color: white;
   border: 1px #e1e1e1 solid;
   border-radius: 4px;
-  padding: 10px 10px 5px 20px;
+  padding: 10px 10px 5px 14px;
   width: 100%;
   z-index: 100;
   position: absolute;
@@ -586,7 +586,7 @@ template {
 
 .sm-dropdown__option__content{
     display: inline-block;
-    padding-left: 20px;
+    padding-left: 18px;
   }
 
 .sm-dropdown__option__mark {
@@ -602,7 +602,7 @@ template {
 .sm-dropdown li {
     position: relative;
     list-style: none;
-    margin: 10px 0;
+    margin: 8px 0;
   }
 
 .sm-dropdown li label {
@@ -619,7 +619,7 @@ template {
     font-size: 10px;
     position: absolute;
     top: 0;
-    right: 0px;
+    right: 0;
     cursor: pointer;
     color: rgb(128, 128, 128) 
   }
@@ -700,6 +700,10 @@ template {
 
 .sm-quote .sm-size-14 {
     font-size: 14px;
+  }
+
+.sm-quote .sm-color-dark {
+    color: black !important;
   }
 
 /* interested page modifier */
@@ -804,9 +808,29 @@ template {
       width: 170px;
     }
 
+@media screen and (max-width: 600px) {
+
+  .sm-quote__page--like-to-target .sm-quote__options__item {
+    width: 400px;
+  }
+}
+
 .sm-quote__page--like-to-target .sm-quote__options .chosen-select {
       width: 170px;
-    }
+}
+
+@media screen and (max-width: 600px) {
+
+  .sm-quote__page--like-to-target .sm-quote__options .chosen-select {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.sm-quote__page--like-to-target .sm-quote__options .chosen-container .chosen-drop {
+      text-align: left !important;
+      margin-top: -10px;
+}
 
 .sm-quote__page--like-to-target .sm-quote__options .chosen-container .chosen-choices {
       border: 1px #e1e1e1 solid;
@@ -816,8 +840,7 @@ template {
       background-image: none;
       min-height: 30px;
       max-width: 170px;
-      
-    }
+}
 
 .sm-quote__page--like-to-target .sm-quote__options .chosen-container .chosen-search-input {
       height: auto !important;
@@ -829,7 +852,7 @@ template {
       &:focus {
         height: auto !important;
       } */
-    }
+}
 
 .sm-quote__page--like-to-target .sm-quote__options .chosen-container .search-choice { 
       background: rgb(237, 237, 237);
@@ -838,12 +861,12 @@ template {
       font-size: 12px;
       padding-left: 10px !important;
       /* padding: 4px 20px 4px 6px; */
-    }
+}
 
 .sm-quote__page--like-to-target .sm-quote__options .chosen-container-active .chosen-choices {
       -webkit-box-shadow: none;
               box-shadow: none;
-    }
+}
 
 /*like to target */
 
@@ -906,8 +929,7 @@ template {
 
 @media screen and (max-width: 600px) {
 
-  .sm-quote__help {
-    display: none;
+  .sm-quote__help {/*display: none; */
   }
 }
 
@@ -927,15 +949,38 @@ template {
     -webkit-tap-highlight-color: transparent;
 }
 
-.sm-quote__options__item {
+.sm-quote__options .form-group {
+      text-align: center !important;
     }
+
+@media screen and (max-width: 600px) {
+
+  .sm-quote__options__item .sm-dropdown {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.sm-quote__options__item--area .sm-dropdown > .sm-dropdown__options {
+        width: 380px;
+        max-height: 200px;
+        overflow: auto;
+}
+
+@media screen and (max-width: 600px) {
+
+  .sm-quote__options__item--area .sm-dropdown > .sm-dropdown__options {
+    width: 100%;
+  }
+}
 
 .sm-quote__options__text {
       font-size: 14px;
       margin: 6px auto 0;
       display: block;
       /* max-width: 140px; */
-    }
+}
 
 .sm-quote__chat-link {
     display: block;
@@ -996,7 +1041,7 @@ template {
 }
 
 .sm-quote .form-label {
-    padding-left: 10px;
+    /* padding-left: 10px; */
 }
 
 .sm-quote .form-help {

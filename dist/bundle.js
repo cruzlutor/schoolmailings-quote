@@ -82,6 +82,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+var form = {
+
+}
 
 function init() {
   // init step bar
@@ -106,16 +109,16 @@ function init() {
     $('#slider-1').sm_slider('goTo', { step: 0 })
   })
 
-  // slider next button
-  $('#slider-2 [data-slider]').on('click', (event) => {
-    $('#slider-2').sm_slider('move', { direction: $(event.target).data('slider') })
-    $('#form-steps').sm_steps('move', { step: $('#slider-2').data('step') })
-  })
+  // // slider next button
+  // $('#slider-2 [data-slider]').on('click', (event) => {
+  //   $('#slider-2').sm_slider('move', { direction: $(event.target).data('slider') })
+  //   $('#form-steps').sm_steps('move', { step: $('#slider-2').data('step') })
+  // })
 
-  // slider next button
-  $('#slider-3 [data-slider]').on('click', (event) => {
-    $('#slider-3').sm_slider('move', { direction: $(event.target).data('slider') })
-  })
+  // // slider next button
+  // $('#slider-3 [data-slider]').on('click', (event) => {
+  //   $('#slider-3').sm_slider('move', { direction: $(event.target).data('slider') })
+  // })
 
   // interested section text hover
   $('.sm-quote__page--interested .sm-quote__options__item').on('mouseenter', (event) => {
@@ -126,6 +129,10 @@ function init() {
   $('.sm-quote__page--interested .sm-quote__options__item').on('mouseleave', (event) => {
     $('#first-help span').html('')
   })
+
+  $('#next-im-interested').on('click', validateImInterested)
+  $('#next-like-target').on('click', validateLikeTarget)
+  $('#next-contact-details').on('click', validateContactDetails)
 
 
   // activate dropdown
@@ -140,68 +147,71 @@ function init() {
 
 }
 
+function validateImInterested() {
+  var value = ''
+  var checkboxes = $('#im-interested-page input:checked')
+  if (checkboxes.length > 0) {
+
+    $(checkboxes).each((index, option) => {
+      value += $(option).val() + ', '
+    })
+    value = value.substring(0, value.length - 2)
+    form["I'm interested in"] = value
+
+    $('#slider-2').sm_slider('goTo', { step: 1 })
+    $('#form-steps').sm_steps('move', { step: $('#slider-2').data('step') })
+
+  } else {
+    $('#first-help span').html('Please choose an option to continue.')
+  }
+}
+
+function validateLikeTarget() {
+  // phase of education
+  var found = false
+  form['Phaser of Education'] = []
+  $('#phase-education input:checked').each((index, option) => {
+    found = true;
+    form['Phaser of Education'].push($(option).val())
+  })
+
+  form['Type of School'] = []
+  $('#type-school input:checked').each((index, option) => {
+    found = true
+    form['Type of School'].push($(option).val())
+  })
+
+  form['Area of School'] = []
+  $('#area-school input:checked').each((index, option) => {
+    found = true
+    form['Area of School'].push($(option).val())
+  })
+
+  form['Decision Maker'] = $('#decision-maker').val() || [];
+
+  if (form['Decision Maker'].length > 0) found = true
+
+  if (found) {
+    $('#slider-2').sm_slider('goTo', { step: 2 })
+    $('#form-steps').sm_steps('move', { step: $('#slider-2').data('step') })
+  } else {
+    $('#second-help span').html('Please choose an option to continue.')
+  }
+}
+
+function validateContactDetails(){
+  form['contact_details'] = []
+  form['contact_details']['charity_agency'] = 'No'
+  var data = $('#contact-details-form').serializeArray()
+  for (var i = 0; i < data.length; i++) {
+    form['contact_details'][data[i]['name']] = data[i]['value'];
+  }
+}
+
 $(document).on('ready', () => {
   init()
 })
 
-// var step = 0
-// var totalSteps = 0
-// var stepsEl
-// var sliderEl
-// var stepsItems
-
-// function init() {
-//   stepsEl = $('#form-steps')
-//   sliderEl = $('#form-slider')
-//   stepsItems = $('.gaqf-steps-point', stepsEl)
-
-//   $('[data-slider]', sliderEl).on('click', (event) => {
-//     var direction = $(event.target).data('slider')
-//     step += (direction == 'next') ? 1 : -1
-//     moveSlider(direction)
-//   })
-
-//   $('.gaqf-content-option', sliderEl).on('mouseenter', (event) => {
-//     $('#first-help span').html($(event.currentTarget).data('help'))
-//   })
-
-//   $('.gaqf-content-option', sliderEl).on('mouseleave', (event) => {
-//     $('#first-help span').html('')
-//   })
-
-//   $('.dropdown-expand', sliderEl).on('click', (event) => {
-//     $(event.currentTarget).toggleClass('is-expanded')
-//     toggleDropdown($(event.currentTarget).siblings('ul'))
-//   })
-
-//   $('.dropdown-handler').on('click', (event) => {
-//     toggleDropdown($(event.currentTarget).siblings('ul'))
-//   })
-// }
-
-// function toggleDropdown(element){
-//   element.toggleClass('is-open')
-// }
-
-// function moveSlider(direction) {
-//   $('.gaqf-slider-container', sliderEl).css({ transform: "translateX(-"+(100 * step) + "%)" });
-//   stepsItems.each((index, item) => {
-//     if (index === step) {
-//       let width = $(item).width() + $(item).position().left + 'px'
-//       if (index === stepsItems.length - 1) width = '100%'
-//       $('.gaqf-steps-bar-fill', stepsEl).css({ width: width })
-//     }
-//     if (index <= step) {
-//       $(item).addClass('is-active')
-//     } else {
-//       $(item).removeClass('is-active')
-//     }
-//   })
-// }
-
-// $(document).on('ready', () => {
-//   init();
-// })
 
 /***/ }),
 /* 1 */
@@ -322,7 +332,7 @@ $(document).on('ready', () => {
       $('.sm-dropdown__handler', dropdown).html(value)
     } else {
       $(dropdown).removeClass('is-active')
-      $('.sm-dropdown__handler', dropdown).html('Select an option')
+      $('.sm-dropdown__handler', dropdown).html('Click here to select')
     }
   }
 
